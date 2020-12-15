@@ -20,30 +20,23 @@ class EnlargeAnimationController : NSObject, UIViewControllerAnimatedTransitioni
     }
     
     func interruptibleAnimator(using transitionContext: UIViewControllerContextTransitioning) -> UIViewImplicitlyAnimating {
-        
         if self.anim != nil {
             return self.anim!
         }
         
-        // let vc1 = transitionContext.viewController(forKey:.from)
         let vc2 = transitionContext.viewController(forKey:.to)
-        
-        let con = transitionContext.containerView
-        
-        // let r1start = transitionContext.initialFrame(for:vc1!)
+        let containerView = transitionContext.containerView
         let finalFrame = transitionContext.finalFrame(for:vc2!)
-        
-        //let v1 = transitionContext.view(forKey:.from)!
         let v2 = transitionContext.view(forKey:.to)!
         
         let widthRatio =  self.tappedView.frame.width / v2.frame.width
         let heightRatio = self.tappedView.frame.height / v2.frame.height
         let convertedLocation = self.tappedView.convert(self.tappedLocation, to: self.window)
         let center = (x: convertedLocation.x - v2.center.x, y: convertedLocation.y - v2.center.y)
-        
+
         v2.frame = finalFrame
         v2.transform = CGAffineTransform(scaleX: widthRatio, y: heightRatio).concatenating(CGAffineTransform(translationX: center.x, y: center.y))
-        con.addSubview(v2)
+        containerView.addSubview(v2)
         v2.layer.cornerRadius = 20
         
         let anim = UIViewPropertyAnimator(duration: 0.2, curve: .linear) {

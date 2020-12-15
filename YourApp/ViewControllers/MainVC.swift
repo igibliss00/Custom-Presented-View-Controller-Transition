@@ -70,8 +70,18 @@ class MainVC: UIViewController {
     @objc func tapped(_ sender: UIGestureRecognizer) {
         guard let tappedView = sender.view else { return }
         let location = sender.location(in: tappedView)
-        let playerVC = PlayerVC(tag: tappedView.tag, tappedViewFrame: tappedView, tappedLocation: location, window: self.view.window!, gestureName: sender.name ?? "")
-        self.present(playerVC, animated: true, completion: nil)
+        
+        var presentedVC: UIViewController!
+        switch sender.name {
+            case GestureNames.enlarge:
+                presentedVC = CoverViewController(tag: tappedView.tag, tappedViewFrame: tappedView, tappedLocation: location, window: self.view.window!)
+            case GestureNames.normal:
+                presentedVC = PlayerVC(tag: tappedView.tag)
+            default:
+                break
+        }
+        
+        self.present(presentedVC, animated: true, completion: nil)
     }
     
     func setupScrollView(with cards: [UIView], title: String) -> UIView {
@@ -146,6 +156,9 @@ class MainVC: UIViewController {
         doubleTap.numberOfTapsRequired = 2
         doubleTap.name = GestureNames.enlarge
         card.addGestureRecognizer(doubleTap)
+        
+        // prevent the single tap to succeed unless the double tap fails
+        tap.require(toFail: doubleTap)
         
         card.addSubview(imageView)
         card.translatesAutoresizingMaskIntoConstraints = false

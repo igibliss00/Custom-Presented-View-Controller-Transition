@@ -28,19 +28,19 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubs-YM-769">
-                    <rect key="frame" x="20" y="602" width="374" height="228"/>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ubs-YM-769">
+                    <rect key="frame" x="20" y="602" width="374" height="160"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alH-HA-uAb">
-                            <rect key="frame" x="0.0" y="0.0" width="124.5" height="228"/>
+                            <rect key="frame" x="0.0" y="0.0" width="118" height="160"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53e-1m-cvu">
-                            <rect key="frame" x="124.5" y="0.0" width="125" height="228"/>
+                            <rect key="frame" x="128" y="0.0" width="118" height="160"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jph-bw-j2k">
-                            <rect key="frame" x="249.5" y="0.0" width="124.5" height="228"/>
+                            <rect key="frame" x="256" y="0.0" width="118" height="160"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                     </subviews>
@@ -49,25 +49,27 @@
                         <constraint firstItem="jph-bw-j2k" firstAttribute="width" secondItem="alH-HA-uAb" secondAttribute="width" id="45f-rU-d9Y"/>
                         <constraint firstItem="jph-bw-j2k" firstAttribute="height" secondItem="alH-HA-uAb" secondAttribute="height" id="dw4-xY-0ne"/>
                         <constraint firstItem="53e-1m-cvu" firstAttribute="height" secondItem="alH-HA-uAb" secondAttribute="height" id="t74-0h-vqt"/>
+                        <constraint firstItem="alH-HA-uAb" firstAttribute="top" secondItem="ubs-YM-769" secondAttribute="topMargin" id="tV2-yj-48p"/>
+                        <constraint firstItem="53e-1m-cvu" firstAttribute="leading" secondItem="alH-HA-uAb" secondAttribute="trailing" constant="10" id="weH-rF-lN0"/>
                     </constraints>
                 </stackView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4tm-mZ-y7S">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4tm-mZ-y7S" userLabel="logo">
                     <rect key="frame" x="87" y="106" width="240" height="217"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5Q-VW-tSS">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5Q-VW-tSS" userLabel="song title">
                     <rect key="frame" x="87" y="352" width="240" height="74"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pyf-Di-puQ">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pyf-Di-puQ" userLabel="timer">
                     <rect key="frame" x="20" y="517" width="374" height="64"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="umG-gH-aVM">
                     <rect key="frame" x="20" y="482" width="374" height="4"/>
                 </progressView>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEJ-ra-8oG">
-                    <rect key="frame" x="315" y="829" width="79" height="24"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEJ-ra-8oG">
+                    <rect key="frame" x="335" y="44" width="79" height="24"/>
                     <color key="tintColor" systemColor="systemRedColor"/>
                     <state key="normal" title="Button">
                         <imageReference key="image" image="xmark.circle" catalog="system" symbolScale="large"/>
@@ -91,7 +93,7 @@
                 <constraint firstItem="Pyf-Di-puQ" firstAttribute="top" secondItem="umG-gH-aVM" secondAttribute="bottom" constant="31" id="GHW-DN-rkC"/>
                 <constraint firstItem="ubs-YM-769" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="602" id="HGv-Q2-fjQ"/>
                 <constraint firstItem="Pyf-Di-puQ" firstAttribute="leading" secondItem="ubs-YM-769" secondAttribute="trailing" constant="-374" id="JNj-5l-zTd"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ubs-YM-769" secondAttribute="bottom" constant="32" id="JsY-jw-EUr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ubs-YM-769" secondAttribute="bottom" constant="100" id="JsY-jw-EUr"/>
                 <constraint firstItem="4tm-mZ-y7S" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="62" id="UQF-IO-AdD"/>
                 <constraint firstItem="ubs-YM-769" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="VBm-bz-jMB"/>
                 <constraint firstItem="i5Q-VW-tSS" firstAttribute="leading" secondItem="4tm-mZ-y7S" secondAttribute="leading" id="WEd-aR-hw2"/>

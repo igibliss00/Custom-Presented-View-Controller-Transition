@@ -9,10 +9,6 @@ import UIKit
 
 class PlayerVC: UIViewController {
     var tag: Int!
-    var tappedLocation: CGPoint!
-    var tappedViewFrame: UIView!
-    var window: UIWindow!
-    var gestureName: String!
     
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var image: UIView!
@@ -24,21 +20,13 @@ class PlayerVC: UIViewController {
     @IBOutlet weak var previous: UIView!
     @IBOutlet weak var nextSong: UIView!
     
-    init(tag: Int, tappedViewFrame: UIView, tappedLocation: CGPoint, window: UIWindow, gestureName: String) {
+    init(tag: Int) {
         super.init(nibName: "PlayerVC", bundle: nil)
         self.tag = tag
-        self.tappedViewFrame = tappedViewFrame
-        self.tappedLocation = tappedLocation
-        self.window = window
-        self.gestureName = gestureName
-        
         // NB if we want to modify the _animation_, we need to set the transitioningDelegate
         self.transitioningDelegate = self
-        // if we want to modify the _presentation_, we need to set the style to custom
-        // customize presentation only on iPhone
-        // in iOS 13 we have a trait collection on creation
         if self.traitCollection.userInterfaceIdiom == .phone {
-            self.modalPresentationStyle = .custom
+            self.modalPresentationStyle = .automatic
         }
     }
     
@@ -52,17 +40,19 @@ class PlayerVC: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapped))
         self.playback.addGestureRecognizer(tap)
         
-        let imageView = UIImageView(frame: .zero)
-        imageView.image = UIImage(named: "\(String(describing: self.tag!)).jpg")
-        imageView.contentMode = .scaleToFill
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.insertSubview(imageView, at: 0)
-        NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: self.view.topAnchor),
-            imageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            imageView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
-        ])
+        configureUI()
+    }
+    
+    func configureUI() {
+        let playbackButton = Playback(frame: .init(origin: .zero, size: .init(width: self.playback.bounds.width, height: self.playback.bounds.width)))
+        self.playback.addSubview(playbackButton)
+        
+        let nextSongButton = NextSongView(frame: .init(origin: .zero, size: .init(width: self.nextSong.bounds.width - 20, height: self.nextSong.bounds.width - 20)))
+        self.nextSong.addSubview(nextSongButton)
+        
+        let nextSongButton2 = NextSongView(frame: .init(origin: .zero, size: .init(width: self.previous.bounds.width - 20, height: self.previous.bounds.width - 20)))
+        nextSongButton2.transform = CGAffineTransform(scaleX: -1, y: 1)
+        self.previous.addSubview(nextSongButton2)
     }
     
     @objc func tapped(_ sender: UITapGestureRecognizer) {
@@ -81,90 +71,11 @@ extension PlayerVC : UIViewControllerTransitioningDelegate {
     }
 }
 
-class MyPresentationController : UIPresentationController {
-    override var frameOfPresentedViewInContainerView : CGRect {
-        return super.frameOfPresentedViewInContainerView.insetBy(dx: 0, dy: 0)
-    }
-}
-
-// ==========================
-extension MyPresentationController {
-    override func presentationTransitionWillBegin() {
-        let con = self.containerView!
-        let shadow = UIView(frame:con.bounds)
-        shadow.backgroundColor = UIColor(white:0, alpha:0.4)
-        con.insertSubview(shadow, at: 0)
-        // deal with what happens on rotation
-        shadow.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        // can play tricks with the presenting view just like phone sheet
-        if let tc = self.presentingViewController.transitionCoordinator {
-            tc.animate { _ in
-                if self.traitCollection.userInterfaceIdiom == .phone {
-//                    self.presentingViewController.view.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
-                }
-            }
-        }
-    }
-}
-
-// ==========================
-extension MyPresentationController {
-    override func dismissalTransitionWillBegin() {
-        let con = self.containerView!
-        let shadow = con.subviews[0]
-        if let tc = self.presentedViewController.transitionCoordinator {
-            tc.animate { _ in
-                shadow.alpha = 0
-                self.presentingViewController.view.transform = .identity
-            }
-        }
-    }
-}
-
-
-// ===========================
-extension MyPresentationController {
-    override var presentedView : UIView? {
-        let v = super.presentedView!
-        v.layer.cornerRadius = 6
-        v.layer.masksToBounds = true
-        return v
-    }
-    //    override func shouldRemovePresentersView() -> Bool {
-    //        return true
-    //    }
-}
-
-
-// ===========================
-extension MyPresentationController {
-    override func presentationTransitionDidEnd(_ completed: Bool) {
-        let vc = self.presentingViewController
-        let v = vc.view
-        v?.tintAdjustmentMode = .dimmed
-    }
-    override func dismissalTransitionDidEnd(_ completed: Bool) {
-        let vc = self.presentingViewController
-        let v = vc.view
-        v?.tintAdjustmentMode = .automatic
-    }
-}
-
-
 // ==========================
 extension PlayerVC /*: UIViewControllerTransitioningDelegate*/ {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        switch self.gestureName {
-            case GestureNames.enlarge:
-                return EnlargeAnimationController(tappedView: self.tappedViewFrame, tappedLocation: self.tappedLocation, window: self.window)
-            case GestureNames.normal:
-                return nil
-            case GestureNames.longPress:
-                return nil
-            default:
-                return nil
-        }
+        return nil
     }
 }
 
