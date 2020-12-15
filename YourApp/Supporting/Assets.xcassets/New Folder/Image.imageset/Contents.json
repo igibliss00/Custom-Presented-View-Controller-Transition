@@ -1,0 +1,2315 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x"
+    },
+    {
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x"
+    },
+    {
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x"
+    },
+    {
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x"
+    },
+    {
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x"
+    },
+    {
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x"
+    },
+    {
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x"
+    },
+    {
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x"
+    },
+    {
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "width-class" : "compact"
+    },
+    {
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "width-class" : "compact"
+    },
+    {
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "sRGB",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x",
+      "width-class" : "compact"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "display-gamut" : "display-P3",
+      "height-class" : "compact",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x",
+      "width-class" : "compact"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}
