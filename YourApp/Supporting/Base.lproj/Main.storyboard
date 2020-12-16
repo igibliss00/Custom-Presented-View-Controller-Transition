@@ -24,6 +24,21 @@
             </objects>
             <point key="canvasLocation" x="1419" y="-722"/>
         </scene>
+        <!--PlayerVC-->
+        <scene sceneID="OEI-Xh-EP2">
+            <objects>
+                <viewController storyboardIdentifier="PlayerVC" id="3ka-U7-Jpj" customClass="PlayerVC" customModule="YourApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ie7-H9-PRu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="U03-PF-MF5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GKJ-y9-1aY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2438" y="-715"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2ho-5Z-5Lo">
             <objects>
@@ -59,21 +74,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZJZ-Wj-Dl3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1393" y="15"/>
-        </scene>
-        <!--PlayerVC-->
-        <scene sceneID="KBT-Dc-cHg">
-            <objects>
-                <viewController storyboardIdentifier="Player" id="EAw-LE-sCw" customClass="PlayerVC" customModule="YourApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xGJ-kt-mzG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Z5Y-WY-Ip2"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wxJ-83-cWM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2490" y="133"/>
         </scene>
         <!--Playlist-->
         <scene sceneID="rMp-6b-lZB">

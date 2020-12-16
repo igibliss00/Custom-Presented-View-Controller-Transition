@@ -71,17 +71,18 @@ class MainVC: UIViewController {
         guard let tappedView = sender.view else { return }
         let location = sender.location(in: tappedView)
         
-        var presentedVC: UIViewController!
         switch sender.name {
             case GestureNames.enlarge:
-                presentedVC = CoverViewController(tag: tappedView.tag, tappedViewFrame: tappedView, tappedLocation: location, window: self.view.window!)
+                let coverVC = CoverViewController(tag: tappedView.tag, tappedViewFrame: tappedView, tappedLocation: location, window: self.view.window!)
+                self.present(coverVC, animated: true, completion: nil)
             case GestureNames.normal:
-                presentedVC = PlayerVC(tag: tappedView.tag)
+                if let playerVC = storyboard?.instantiateViewController(identifier: "PlayerVC") as? PlayerVC {
+                    playerVC.tag = tappedView.tag
+                    self.present(playerVC, animated: true, completion: nil)
+                }
             default:
                 break
         }
-        
-        self.present(presentedVC, animated: true, completion: nil)
     }
     
     func setupScrollView(with cards: [UIView], title: String) -> UIView {

@@ -11,22 +11,29 @@ class NextSongView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.createTriangles()
+        self.backgroundColor = .purple
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        self.createTriangles()
     }
     
     func createTriangles() {
-        let arrowLayer = ArrowLayer(width: self.bounds.size.width, height: self.bounds.size.height, color: UIColor("1d2d50").cgColor)
-        arrowLayer.position = self.center
-        arrowLayer.bounds = self.frame
+        let width = self.frame.width - 20
+        let size = CGSize(width: width, height: width)
+        let newFrame = CGRect(origin: .zero, size: size)
+        let newCenter = CGPoint(x: width/2, y: width/2)
+
+        let arrowLayer = ArrowLayer(width: size.width, height: size.width, color: UIColor("1d2d50").cgColor)
+        arrowLayer.position = newCenter
+        arrowLayer.bounds = newFrame
         self.layer.addSublayer(arrowLayer)
         
-        let arrowLayer1 = ArrowLayer(width: self.bounds.size.width, height: self.bounds.size.height, color: UIColor("1d2d50").cgColor)
-        arrowLayer1.position.y = self.center.y
-        arrowLayer1.position.x = self.center.x + 20
-        arrowLayer1.bounds = self.frame
+        let arrowLayer1 = ArrowLayer(width: size.width, height: size.width, color: UIColor("1d2d50").cgColor)
+        arrowLayer1.position.y = newCenter.y
+        arrowLayer1.position.x = newCenter.x + 20
+        arrowLayer1.bounds = newFrame
         self.layer.addSublayer(arrowLayer1)
     }
 }

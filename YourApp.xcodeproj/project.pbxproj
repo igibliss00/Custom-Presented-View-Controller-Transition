@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49375D8B25899E4E002730A0 /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49375D8A25899E4E002730A0 /* PlayerVC.swift */; };
 		4949BA6E25885036004F083E /* AppDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4949BA6D25885036004F083E /* AppDataTypes.swift */; };
 		4949BA80258852E0004F083E /* LongPressAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4949BA7F258852E0004F083E /* LongPressAnimationController.swift */; };
 		4949BA88258855DA004F083E /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4949BA87258855DA004F083E /* ModalViewController.swift */; };
@@ -14,9 +15,7 @@
 		4949BA9625885773004F083E /* CoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4949BA9525885773004F083E /* CoverViewController.swift */; };
 		494F1FF6257EC94200A2ED34 /* MyApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F1FF5257EC94200A2ED34 /* MyApplication.swift */; };
 		494F1FFB257EC97500A2ED34 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F1FFA257EC97500A2ED34 /* main.swift */; };
-		49629DCA2587553800BF5B8A /* PlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49629DC92587553800BF5B8A /* PlayerVC.xib */; };
 		49629DCF25875E5400BF5B8A /* EnlargeAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49629DCE25875E5400BF5B8A /* EnlargeAnimationController.swift */; };
-		4997D457258021100053F1C3 /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4997D456258021100053F1C3 /* PlayerVC.swift */; };
 		49A208C425886F4B00084C15 /* Playback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A208C325886F4B00084C15 /* Playback.swift */; };
 		49A208C9258878FC00084C15 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A208C8258878FC00084C15 /* AppExtensions.swift */; };
 		49C46A692588827400A1F2D6 /* ArrowLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C46A682588827400A1F2D6 /* ArrowLayer.swift */; };
@@ -51,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49375D8A25899E4E002730A0 /* PlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
 		4949BA6D25885036004F083E /* AppDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataTypes.swift; sourceTree = "<group>"; };
 		4949BA7F258852E0004F083E /* LongPressAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressAnimationController.swift; sourceTree = "<group>"; };
 		4949BA87258855DA004F083E /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
@@ -58,9 +58,7 @@
 		4949BA9525885773004F083E /* CoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverViewController.swift; sourceTree = "<group>"; };
 		494F1FF5257EC94200A2ED34 /* MyApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApplication.swift; sourceTree = "<group>"; };
 		494F1FFA257EC97500A2ED34 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		49629DC92587553800BF5B8A /* PlayerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerVC.xib; sourceTree = "<group>"; };
 		49629DCE25875E5400BF5B8A /* EnlargeAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnlargeAnimationController.swift; sourceTree = "<group>"; };
-		4997D456258021100053F1C3 /* PlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
 		49A208C325886F4B00084C15 /* Playback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playback.swift; sourceTree = "<group>"; };
 		49A208C8258878FC00084C15 /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
 		49C46A682588827400A1F2D6 /* ArrowLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowLayer.swift; sourceTree = "<group>"; };
@@ -121,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				49E7F0CB2559D0F500F86CC3 /* MainVC.swift */,
-				4997D456258021100053F1C3 /* PlayerVC.swift */,
+				49375D8A25899E4E002730A0 /* PlayerVC.swift */,
 				4949BA87258855DA004F083E /* ModalViewController.swift */,
 				4949BA9525885773004F083E /* CoverViewController.swift */,
 				49F30FB42586DB160021A062 /* FavoriteVC.swift */,
@@ -133,8 +131,9 @@
 		4949BA77258851D4004F083E /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				494F1FF5257EC94200A2ED34 /* MyApplication.swift */,
+				494F1FFA257EC97500A2ED34 /* main.swift */,
 				49E7F0C72559D0F500F86CC3 /* AppDelegate.swift */,
-				49629DC92587553800BF5B8A /* PlayerVC.xib */,
 				49E7F0C92559D0F500F86CC3 /* SceneDelegate.swift */,
 				49E7F0CD2559D0F500F86CC3 /* Main.storyboard */,
 				49E7F0D02559D0F700F86CC3 /* Assets.xcassets */,
@@ -193,8 +192,6 @@
 		49E7F0C62559D0F500F86CC3 /* YourApp */ = {
 			isa = PBXGroup;
 			children = (
-				494F1FF5257EC94200A2ED34 /* MyApplication.swift */,
-				494F1FFA257EC97500A2ED34 /* main.swift */,
 				49A208C225886F1700084C15 /* Graphics */,
 				4949BA8C25885671004F083E /* Presentation Controllers */,
 				4949BA78258851FA004F083E /* Animation Controllers */,
@@ -330,7 +327,6 @@
 				49E7F0D42559D0F700F86CC3 /* LaunchScreen.storyboard in Resources */,
 				49E7F0D12559D0F700F86CC3 /* Assets.xcassets in Resources */,
 				49E7F0CF2559D0F500F86CC3 /* Main.storyboard in Resources */,
-				49629DCA2587553800BF5B8A /* PlayerVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,9 +354,9 @@
 				494F1FF6257EC94200A2ED34 /* MyApplication.swift in Sources */,
 				4949BA80258852E0004F083E /* LongPressAnimationController.swift in Sources */,
 				494F1FFB257EC97500A2ED34 /* main.swift in Sources */,
+				49375D8B25899E4E002730A0 /* PlayerVC.swift in Sources */,
 				49F30FBA2586DB2C0021A062 /* PlaylistVC.swift in Sources */,
 				4949BA88258855DA004F083E /* ModalViewController.swift in Sources */,
-				4997D457258021100053F1C3 /* PlayerVC.swift in Sources */,
 				49E7F0CC2559D0F500F86CC3 /* MainVC.swift in Sources */,
 				49F30FB52586DB160021A062 /* FavoriteVC.swift in Sources */,
 				49C46A692588827400A1F2D6 /* ArrowLayer.swift in Sources */,
