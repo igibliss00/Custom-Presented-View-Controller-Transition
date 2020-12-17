@@ -18,6 +18,7 @@ class PlayerVC: UIViewController {
     var playback: Playback!
     var previous: NextSongView!
     var nextSong: NextSongView!
+    var timerLabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,24 @@ class PlayerVC: UIViewController {
     @objc func tapped(_ sender: UITapGestureRecognizer) {
         self.isPaused = !self.isPaused
         self.playback.isPaused = self.isPaused
-        print("tapped")
+        
+        let animation = UIViewPropertyAnimator(duration: 30.0, curve: .linear) {
+            self.progressView.setProgress(1.0, animated: true)
+        }
+
+        let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotation.toValue = NSNumber(value: Double.pi * 2)
+        rotation.duration = 2
+        rotation.isCumulative = true
+        rotation.repeatCount = Float.greatestFiniteMagnitude
+        
+        if self.isPaused {
+            self.imageView.layer.add(rotation, forKey: "rotationAnimation")
+            animation.startAnimation()
+        } else {
+            self.imageView.layer.removeAllAnimations()
+            animation.stopAnimation(true)
+        }
     }
     
     func configureUI() {
@@ -62,12 +80,11 @@ class PlayerVC: UIViewController {
         self.progressView = UIProgressView(progressViewStyle: .default)
         self.view.addSubview(self.progressView)
         self.progressView.translatesAutoresizingMaskIntoConstraints = false
-        self.progressView.setProgress(0.5, animated: true)
+        self.progressView.setProgress(0.0, animated: true)
         
         // timerView
         self.timerView = UIView()
-        let timerLabel = UILabel()
-        timerLabel.text = "0:34"
+        timerLabel.text = ""
         self.timerView.addSubview(timerLabel)
         self.view.addSubview(timerView)
         self.timerView.translatesAutoresizingMaskIntoConstraints = false
@@ -86,7 +103,7 @@ class PlayerVC: UIViewController {
         self.view.addSubview(self.panelStackView)
         self.panelStackView.translatesAutoresizingMaskIntoConstraints = false
         self.panelStackView.distribution = .fillEqually
-        self.panelStackView.alignment = .center
+        self.panelStackView.alignment = .fill
         self.panelStackView.spacing = 10
         
         NSLayoutConstraint.activate([
@@ -105,6 +122,7 @@ class PlayerVC: UIViewController {
             // songTitle
             songTitleLabel.widthAnchor.constraint(equalTo: titleView.widthAnchor),
             songTitleLabel.heightAnchor.constraint(equalTo: titleView.heightAnchor),
+            songTitleLabel.centerXAnchor.constraint(equalTo: titleView.centerXAnchor),
             
             // progressView
             progressView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.90),
@@ -121,13 +139,16 @@ class PlayerVC: UIViewController {
             // timerLabel
             timerLabel.widthAnchor.constraint(equalTo: timerView.widthAnchor),
             timerLabel.heightAnchor.constraint(equalTo: timerView.heightAnchor),
+            timerLabel.centerXAnchor.constraint(equalTo: titleView.centerXAnchor),
             
             // panelStackView
-            panelStackView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.90),
+            panelStackView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
+            panelStackView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
+//            panelStackView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.90),
             panelStackView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.25),
             panelStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            panelStackView.topAnchor.constraint(lessThanOrEqualTo: timerView.bottomAnchor, constant: 20),
-            panelStackView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -50)
+            panelStackView.topAnchor.constraint(lessThanOrEqualTo: timerView.bottomAnchor, constant: 40),
+            panelStackView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -20)
         ])
     }
     
@@ -151,24 +172,3 @@ class PlayerVC: UIViewController {
 //        }
 //    }
 //}
-
-
-
-extension UIStackView {
-    open override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        
-        if clipsToBounds || isHidden || alpha == 0 {
-            return nil
-        }
-        
-        for subview in subviews.reversed() {
-            let subPoint = subview.convert(point, from: self)
-            if let result = subview.hitTest(subPoint, with: event) {
-                print("result", result)
-                return result
-            }
-        }
-        
-        return nil
-    }
-}

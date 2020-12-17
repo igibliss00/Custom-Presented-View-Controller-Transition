@@ -12,7 +12,6 @@ class CoverViewController: UIViewController {
     var tappedLocation: CGPoint!
     var tappedViewFrame: UIView!
     var window: UIWindow!
-    let button = UIButton()
     
     init(tag: Int, tappedViewFrame: UIView, tappedLocation: CGPoint, window: UIWindow) {
         super.init(nibName: nil, bundle: nil)
@@ -47,27 +46,19 @@ class CoverViewController: UIViewController {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         self.view.insertSubview(imageView, at: 0)
         
-        button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
-        button.setTitle("Dismiss", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(button)
-        
         NSLayoutConstraint.activate([
-            // button
-            button.widthAnchor.constraint(equalToConstant: 200),
-            button.heightAnchor.constraint(equalToConstant: 100),
-            button.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 100),
-            button.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100),
-            
             // bg image
             imageView.topAnchor.constraint(equalTo: self.view.topAnchor),
             imageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
             imageView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         ])
+            
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapped))
+        self.view.addGestureRecognizer(tap)
     }
     
-    @objc func buttonPressed(_ sender: UIButton) {
+    @objc func tapped(_ sender: UITapGestureRecognizer) {
         self.dismiss(animated: true, completion: nil)
     }
 

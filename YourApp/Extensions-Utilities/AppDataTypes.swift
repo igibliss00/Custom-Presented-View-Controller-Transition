@@ -13,3 +13,8 @@ struct GestureNames {
     static let normal = "normal"
     static let longPress = "longPress"
 }
+
+struct CellNames {
+    static let cell = "cell"
+    static let customCell = "customCell"
+}

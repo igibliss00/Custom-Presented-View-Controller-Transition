@@ -11,12 +11,10 @@ class NextSongView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.createTriangles()
-        self.backgroundColor = .purple
     }
     
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        self.createTriangles()
+        fatalError("init(coder:) has not been implemented")
     }
     
     func createTriangles() {

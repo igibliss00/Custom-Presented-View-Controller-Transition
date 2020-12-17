@@ -15,6 +15,9 @@
 		4949BA9625885773004F083E /* CoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4949BA9525885773004F083E /* CoverViewController.swift */; };
 		494F1FF6257EC94200A2ED34 /* MyApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F1FF5257EC94200A2ED34 /* MyApplication.swift */; };
 		494F1FFB257EC97500A2ED34 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F1FFA257EC97500A2ED34 /* main.swift */; };
+		495D91F8258A806C00D19ED9 /* LongPressPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495D91F7258A806C00D19ED9 /* LongPressPresentationController.swift */; };
+		495D91FD258A8D1D00D19ED9 /* DownArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495D91FC258A8D1D00D19ED9 /* DownArrow.swift */; };
+		495D9202258AACC300D19ED9 /* SummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495D9201258AACC300D19ED9 /* SummaryTableViewController.swift */; };
 		49629DCF25875E5400BF5B8A /* EnlargeAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49629DCE25875E5400BF5B8A /* EnlargeAnimationController.swift */; };
 		49A208C425886F4B00084C15 /* Playback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A208C325886F4B00084C15 /* Playback.swift */; };
 		49A208C9258878FC00084C15 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A208C8258878FC00084C15 /* AppExtensions.swift */; };
@@ -58,6 +61,9 @@
 		4949BA9525885773004F083E /* CoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverViewController.swift; sourceTree = "<group>"; };
 		494F1FF5257EC94200A2ED34 /* MyApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApplication.swift; sourceTree = "<group>"; };
 		494F1FFA257EC97500A2ED34 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		495D91F7258A806C00D19ED9 /* LongPressPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressPresentationController.swift; sourceTree = "<group>"; };
+		495D91FC258A8D1D00D19ED9 /* DownArrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownArrow.swift; sourceTree = "<group>"; };
+		495D9201258AACC300D19ED9 /* SummaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewController.swift; sourceTree = "<group>"; };
 		49629DCE25875E5400BF5B8A /* EnlargeAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnlargeAnimationController.swift; sourceTree = "<group>"; };
 		49A208C325886F4B00084C15 /* Playback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playback.swift; sourceTree = "<group>"; };
 		49A208C8258878FC00084C15 /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 				49E7F0CB2559D0F500F86CC3 /* MainVC.swift */,
 				49375D8A25899E4E002730A0 /* PlayerVC.swift */,
 				4949BA87258855DA004F083E /* ModalViewController.swift */,
+				495D9201258AACC300D19ED9 /* SummaryTableViewController.swift */,
 				4949BA9525885773004F083E /* CoverViewController.swift */,
 				49F30FB42586DB160021A062 /* FavoriteVC.swift */,
 				49F30FB92586DB2C0021A062 /* PlaylistVC.swift */,
@@ -155,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				4949BA8D2588569E004F083E /* MyPresentationController.swift */,
+				495D91F7258A806C00D19ED9 /* LongPressPresentationController.swift */,
 			);
 			path = "Presentation Controllers";
 			sourceTree = "<group>";
@@ -165,6 +173,7 @@
 				49A208C325886F4B00084C15 /* Playback.swift */,
 				49C46A682588827400A1F2D6 /* ArrowLayer.swift */,
 				49C46A702588904900A1F2D6 /* NextSongView.swift */,
+				495D91FC258A8D1D00D19ED9 /* DownArrow.swift */,
 			);
 			path = Graphics;
 			sourceTree = "<group>";
@@ -359,6 +368,7 @@
 				4949BA88258855DA004F083E /* ModalViewController.swift in Sources */,
 				49E7F0CC2559D0F500F86CC3 /* MainVC.swift in Sources */,
 				49F30FB52586DB160021A062 /* FavoriteVC.swift in Sources */,
+				495D91F8258A806C00D19ED9 /* LongPressPresentationController.swift in Sources */,
 				49C46A692588827400A1F2D6 /* ArrowLayer.swift in Sources */,
 				49E7F0C82559D0F500F86CC3 /* AppDelegate.swift in Sources */,
 				4949BA6E25885036004F083E /* AppDataTypes.swift in Sources */,
@@ -367,7 +377,9 @@
 				49629DCF25875E5400BF5B8A /* EnlargeAnimationController.swift in Sources */,
 				49E7F0CA2559D0F500F86CC3 /* SceneDelegate.swift in Sources */,
 				4949BA8E2588569E004F083E /* MyPresentationController.swift in Sources */,
+				495D91FD258A8D1D00D19ED9 /* DownArrow.swift in Sources */,
 				49A208C9258878FC00084C15 /* AppExtensions.swift in Sources */,
+				495D9202258AACC300D19ED9 /* SummaryTableViewController.swift in Sources */,
 				49C46A712588904900A1F2D6 /* NextSongView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

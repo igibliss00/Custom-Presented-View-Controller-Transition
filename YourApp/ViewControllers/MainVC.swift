@@ -80,6 +80,9 @@ class MainVC: UIViewController {
                     playerVC.tag = tappedView.tag
                     self.present(playerVC, animated: true, completion: nil)
                 }
+            case GestureNames.longPress:
+                let modalVC = ModalViewController(tag: tappedView.tag)
+                self.present(modalVC, animated: true, completion: nil)
             default:
                 break
         }
@@ -128,7 +131,6 @@ class MainVC: UIViewController {
         return containerView
     }
     
-    
     func createImage(index: Int, isCircular: Bool) -> UIView {
         var finalImage: UIImage!
         let img = UIImage(named: "\(index).jpg")!
@@ -157,6 +159,10 @@ class MainVC: UIViewController {
         doubleTap.numberOfTapsRequired = 2
         doubleTap.name = GestureNames.enlarge
         card.addGestureRecognizer(doubleTap)
+        
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(tapped))
+        longPress.name = GestureNames.longPress
+        card.addGestureRecognizer(longPress)
         
         // prevent the single tap to succeed unless the double tap fails
         tap.require(toFail: doubleTap)
