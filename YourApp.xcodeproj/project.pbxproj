@@ -13,9 +13,6 @@
 		4949BA88258855DA004F083E /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4949BA87258855DA004F083E /* ModalViewController.swift */; };
 		4949BA8E2588569E004F083E /* MyPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4949BA8D2588569E004F083E /* MyPresentationController.swift */; };
 		4949BA9625885773004F083E /* CoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4949BA9525885773004F083E /* CoverViewController.swift */; };
-		494BE5CC258AEB3B00917011 /* 3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 494BE5C9258AEB3B00917011 /* 3.gif */; };
-		494BE5CD258AEB3B00917011 /* 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 494BE5CA258AEB3B00917011 /* 2.gif */; };
-		494BE5CE258AEB3B00917011 /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 494BE5CB258AEB3B00917011 /* 1.gif */; };
 		494BE5D6258AEC0500917011 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 494BE5D5258AEC0500917011 /* README.md */; };
 		494F1FF6257EC94200A2ED34 /* MyApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F1FF5257EC94200A2ED34 /* MyApplication.swift */; };
 		494F1FFB257EC97500A2ED34 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F1FFA257EC97500A2ED34 /* main.swift */; };
@@ -63,9 +60,6 @@
 		4949BA87258855DA004F083E /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		4949BA8D2588569E004F083E /* MyPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPresentationController.swift; sourceTree = "<group>"; };
 		4949BA9525885773004F083E /* CoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverViewController.swift; sourceTree = "<group>"; };
-		494BE5C9258AEB3B00917011 /* 3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 3.gif; path = ../../../Downloads/3.gif; sourceTree = "<group>"; };
-		494BE5CA258AEB3B00917011 /* 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 2.gif; path = ../../../Downloads/2.gif; sourceTree = "<group>"; };
-		494BE5CB258AEB3B00917011 /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 1.gif; path = ../../../Downloads/1.gif; sourceTree = "<group>"; };
 		494BE5D2258AEBC600917011 /* 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 2.gif; sourceTree = "<group>"; };
 		494BE5D3258AEBC600917011 /* 3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 3.gif; sourceTree = "<group>"; };
 		494BE5D4258AEBC600917011 /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1.gif; sourceTree = "<group>"; };
@@ -216,9 +210,6 @@
 		49E7F0C62559D0F500F86CC3 /* YourApp */ = {
 			isa = PBXGroup;
 			children = (
-				494BE5CB258AEB3B00917011 /* 1.gif */,
-				494BE5CA258AEB3B00917011 /* 2.gif */,
-				494BE5C9258AEB3B00917011 /* 3.gif */,
 				49A208C225886F1700084C15 /* Graphics */,
 				4949BA8C25885671004F083E /* Presentation Controllers */,
 				4949BA78258851FA004F083E /* Animation Controllers */,
@@ -351,10 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				494BE5CE258AEB3B00917011 /* 1.gif in Resources */,
-				494BE5CC258AEB3B00917011 /* 3.gif in Resources */,
 				494BE5D6258AEC0500917011 /* README.md in Resources */,
-				494BE5CD258AEB3B00917011 /* 2.gif in Resources */,
 				49E7F0D42559D0F700F86CC3 /* LaunchScreen.storyboard in Resources */,
 				49E7F0D12559D0F700F86CC3 /* Assets.xcassets in Resources */,
 				49E7F0CF2559D0F500F86CC3 /* Main.storyboard in Resources */,
