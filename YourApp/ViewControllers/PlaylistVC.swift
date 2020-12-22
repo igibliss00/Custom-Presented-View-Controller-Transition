@@ -14,7 +14,6 @@ class PlaylistVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.v.image = UIImage(named: "5.jpg")
         self.view.addSubview(self.v)
         self.v.isUserInteractionEnabled = true
         self.v.layer.cornerRadius = 20
@@ -27,6 +26,12 @@ class PlaylistVC: UIViewController {
         
         let pan = UIPanGestureRecognizer(target: self, action: #selector(panned))
         self.v.addGestureRecognizer(pan)
+        
+        let pinch = UIPinchGestureRecognizer(target: self, action: #selector(pinched))
+        self.v.addGestureRecognizer(pinch)
+        
+        let rotate = UIRotationGestureRecognizer(target: self, action: #selector(rotated))
+        self.v.addGestureRecognizer(rotate)
         
         NSLayoutConstraint.activate([
             v.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
@@ -52,4 +57,21 @@ class PlaylistVC: UIViewController {
                 break
         }
     }
+    
+    @objc func rotated(_ gestureRecognizer: UIRotationGestureRecognizer) {
+        guard let myView = gestureRecognizer.view else { return }
+        if gestureRecognizer.state == .began || gestureRecognizer.state == .changed {
+            myView.transform = myView.transform.rotated(by: gestureRecognizer.rotation)
+            gestureRecognizer.rotation = 0
+        }
+    }
+    
+    @objc func pinched(_ gestureRecognizer: UIPinchGestureRecognizer) {
+        if gestureRecognizer.state == .began || gestureRecognizer.state == .changed {
+            gestureRecognizer.view?.transform = (gestureRecognizer.view?.transform.scaledBy(x: gestureRecognizer.scale, y: gestureRecognizer.scale))!
+            gestureRecognizer.scale = 1.0
+            print(gestureRecognizer.state)
+        }
+    }
+    
 }

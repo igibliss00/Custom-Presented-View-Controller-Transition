@@ -53,6 +53,7 @@
                         <segue destination="ZiX-mS-swz" kind="relationship" relationship="viewControllers" id="egF-EJ-KrO"/>
                         <segue destination="sNC-Md-7uX" kind="relationship" relationship="viewControllers" id="jGR-XC-mi6"/>
                         <segue destination="xHl-PB-ZB1" kind="relationship" relationship="viewControllers" id="gxl-H1-fFT"/>
+                        <segue destination="gqV-kE-gzk" kind="relationship" relationship="viewControllers" id="RZ9-Xi-pY8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kf6-7t-z65" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -79,7 +80,7 @@
         <scene sceneID="rMp-6b-lZB">
             <objects>
                 <viewController title="Playlist" id="xHl-PB-ZB1" customClass="PlaylistVC" customModule="YourApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Dmm-Jw-nec" customClass="pla">
+                    <view key="view" contentMode="scaleToFill" id="Dmm-Jw-nec">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="bjH-SO-bJ7"/>
@@ -90,6 +91,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLr-kw-MxZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1393" y="741"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="EBY-ua-BlC">
+            <objects>
+                <viewController id="gqV-kE-gzk" customClass="SetttingsViewController" customModule="YourApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gOw-23-8vd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="FIN-Au-Lyt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="Ntl-Rc-Uo7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xWj-pX-33o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1401" y="1415"/>
         </scene>
     </scenes>
     <resources>

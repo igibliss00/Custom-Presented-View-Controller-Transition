@@ -22,6 +22,7 @@
 		49629DCF25875E5400BF5B8A /* EnlargeAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49629DCE25875E5400BF5B8A /* EnlargeAnimationController.swift */; };
 		49A208C425886F4B00084C15 /* Playback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A208C325886F4B00084C15 /* Playback.swift */; };
 		49A208C9258878FC00084C15 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A208C8258878FC00084C15 /* AppExtensions.swift */; };
+		49AB825D2591851C00B53B32 /* SetttingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB825C2591851C00B53B32 /* SetttingsViewController.swift */; };
 		49C46A692588827400A1F2D6 /* ArrowLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C46A682588827400A1F2D6 /* ArrowLayer.swift */; };
 		49C46A712588904900A1F2D6 /* NextSongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C46A702588904900A1F2D6 /* NextSongView.swift */; };
 		49E7F0C82559D0F500F86CC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E7F0C72559D0F500F86CC3 /* AppDelegate.swift */; };
@@ -72,6 +73,7 @@
 		49629DCE25875E5400BF5B8A /* EnlargeAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnlargeAnimationController.swift; sourceTree = "<group>"; };
 		49A208C325886F4B00084C15 /* Playback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playback.swift; sourceTree = "<group>"; };
 		49A208C8258878FC00084C15 /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
+		49AB825C2591851C00B53B32 /* SetttingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetttingsViewController.swift; sourceTree = "<group>"; };
 		49C46A682588827400A1F2D6 /* ArrowLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowLayer.swift; sourceTree = "<group>"; };
 		49C46A702588904900A1F2D6 /* NextSongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextSongView.swift; sourceTree = "<group>"; };
 		49E7F0C42559D0F500F86CC3 /* YourApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,7 @@
 				4949BA87258855DA004F083E /* ModalViewController.swift */,
 				495D9201258AACC300D19ED9 /* SummaryTableViewController.swift */,
 				4949BA9525885773004F083E /* CoverViewController.swift */,
+				49AB825C2591851C00B53B32 /* SetttingsViewController.swift */,
 				49F30FB42586DB160021A062 /* FavoriteVC.swift */,
 				49F30FB92586DB2C0021A062 /* PlaylistVC.swift */,
 			);
@@ -382,6 +385,7 @@
 				49C46A692588827400A1F2D6 /* ArrowLayer.swift in Sources */,
 				49E7F0C82559D0F500F86CC3 /* AppDelegate.swift in Sources */,
 				4949BA6E25885036004F083E /* AppDataTypes.swift in Sources */,
+				49AB825D2591851C00B53B32 /* SetttingsViewController.swift in Sources */,
 				49A208C425886F4B00084C15 /* Playback.swift in Sources */,
 				4949BA9625885773004F083E /* CoverViewController.swift in Sources */,
 				49629DCF25875E5400BF5B8A /* EnlargeAnimationController.swift in Sources */,
