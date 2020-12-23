@@ -7,8 +7,15 @@
 
 import UIKit
 
-class FavoriteVC: UIViewController, UIPageViewControllerDataSource {
+class PageVC: UIViewController, UIPageViewControllerDataSource {
     let galleries: [String] = ["1", "2", "3", "4", "5", "6", "7"]
+    
+    override func loadView() {
+        let screenSize = UIScreen.main.bounds.size
+        let view = UIView(frame: CGRect(origin: .zero, size: .init(width: screenSize.width, height: screenSize.height)))
+        view.backgroundColor = .white
+        self.view = view
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

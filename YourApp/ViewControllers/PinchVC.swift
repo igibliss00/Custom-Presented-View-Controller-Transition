@@ -1,5 +1,5 @@
 //
-//  SetttingsViewController.swift
+//  PinchVC.swift
 //  YourApp
 //
 //  Created by J C on 2020-12-21.
@@ -7,8 +7,15 @@
 
 import UIKit
 
-class SetttingsViewController: UIViewController {
+class PinchVC: UIViewController {
 
+    override func loadView() {
+        let screenSize = UIScreen.main.bounds.size
+        let view = UIView(frame: CGRect(origin: .zero, size: .init(width: screenSize.width, height: screenSize.height)))
+        view.backgroundColor = .white
+        self.view = view
+    }
+    
     let imageView = UIImageView()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,9 +53,6 @@ class SetttingsViewController: UIViewController {
         if gestureRecognizer.state == .began || gestureRecognizer.state == .changed {
             gestureRecognizer.view?.transform = (gestureRecognizer.view?.transform.scaledBy(x: gestureRecognizer.scale, y: gestureRecognizer.scale))!
             gestureRecognizer.scale = 1.0
-            print(gestureRecognizer.state)
         }
     }
-    
-
 }

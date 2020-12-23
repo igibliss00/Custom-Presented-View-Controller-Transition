@@ -7,10 +7,17 @@
 
 import UIKit
 
-class PlaylistVC: UIViewController {
+class SnapVC: UIViewController {
     let v = UIImageView(image: UIImage(named: "5.jpg"))
     var animator: UIDynamicAnimator!
     var snapping: UISnapBehavior!
+    
+    override func loadView() {
+        let screenSize = UIScreen.main.bounds.size
+        let view = UIView(frame: CGRect(origin: .zero, size: .init(width: screenSize.width, height: screenSize.height)))
+        view.backgroundColor = .white
+        self.view = view
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,8 +77,6 @@ class PlaylistVC: UIViewController {
         if gestureRecognizer.state == .began || gestureRecognizer.state == .changed {
             gestureRecognizer.view?.transform = (gestureRecognizer.view?.transform.scaledBy(x: gestureRecognizer.scale, y: gestureRecognizer.scale))!
             gestureRecognizer.scale = 1.0
-            print(gestureRecognizer.state)
         }
     }
-    
-}
+	}
