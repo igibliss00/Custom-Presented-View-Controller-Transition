@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct GestureNames {
     static let enlarge = "enlarge"
     static let normal = "normal"
@@ -17,4 +16,12 @@ struct GestureNames {
 struct CellNames {
     static let cell = "cell"
     static let customCell = "customCell"
+}
+
+struct AnimationName {
+    static var prgr = "Pinch Rotate Gesture Recognizer"
+    static var snap = "UISnapBehavior"
+    static var scroll = "Scroll View Zoom"
+    static var page = "Page"
+    static var autoScroll = "Auto Scroll"
 }

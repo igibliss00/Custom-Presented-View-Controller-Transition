@@ -7,15 +7,8 @@
 
 import UIKit
 
-struct AnimationName {
-    static var prgr = "Pinch Rotate Gesture Recognizer"
-    static var snap = "UISnapBehavior"
-    static var scroll = "Scroll View Zoom"
-    static var page = "Page"
-}
-
 class AnimationsVC: UITableViewController {
-    let data = [AnimationName.prgr, AnimationName.snap, AnimationName.scroll, AnimationName.page]
+    let data = [AnimationName.prgr, AnimationName.snap, AnimationName.scroll, AnimationName.page, AnimationName.autoScroll]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +45,9 @@ class AnimationsVC: UITableViewController {
             case AnimationName.scroll:
                 let scrollVC = ScrollVC()
                 self.navigationController?.pushViewController(scrollVC, animated: true)
+            case AnimationName.autoScroll:
+                let autoScroll = AutoScrollVC()
+                self.navigationController?.pushViewController(autoScroll, animated: true)
             default:
                 break
         }
