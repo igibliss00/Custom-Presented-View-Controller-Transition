@@ -8,7 +8,7 @@
 import UIKit
 
 class AnimationsVC: UITableViewController {
-    let data = [AnimationName.prgr, AnimationName.snap, AnimationName.scroll, AnimationName.page, AnimationName.autoScroll]
+    let data = [AnimationName.prgr, AnimationName.snap, AnimationName.scroll, AnimationName.page, AnimationName.autoScroll, AnimationName.customTable]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +48,9 @@ class AnimationsVC: UITableViewController {
             case AnimationName.autoScroll:
                 let autoScroll = AutoScrollVC()
                 self.navigationController?.pushViewController(autoScroll, animated: true)
+            case AnimationName.customTable:
+                let customTableVC = CustomTableVC()
+                self.navigationController?.pushViewController(customTableVC, animated: true)
             default:
                 break
         }

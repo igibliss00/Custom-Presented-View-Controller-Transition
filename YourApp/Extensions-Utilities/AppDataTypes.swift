@@ -24,4 +24,5 @@ struct AnimationName {
     static var scroll = "Scroll View Zoom"
     static var page = "Page"
     static var autoScroll = "Auto Scroll"
+    static var customTable = "Custom Table"
 }

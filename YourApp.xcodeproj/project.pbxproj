@@ -20,6 +20,7 @@
 		495D91FD258A8D1D00D19ED9 /* DownArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495D91FC258A8D1D00D19ED9 /* DownArrow.swift */; };
 		495D9202258AACC300D19ED9 /* SummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495D9201258AACC300D19ED9 /* SummaryTableViewController.swift */; };
 		49629DCF25875E5400BF5B8A /* EnlargeAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49629DCE25875E5400BF5B8A /* EnlargeAnimationController.swift */; };
+		4978649D2596C67300FD83EA /* CustomTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4978649C2596C67300FD83EA /* CustomTableVC.swift */; };
 		49A208C425886F4B00084C15 /* Playback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A208C325886F4B00084C15 /* Playback.swift */; };
 		49A208C9258878FC00084C15 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A208C8258878FC00084C15 /* AppExtensions.swift */; };
 		49A4A5CE2593D15C0002009B /* AnimationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A4A5CD2593D15C0002009B /* AnimationsVC.swift */; };
@@ -74,6 +75,7 @@
 		495D91FC258A8D1D00D19ED9 /* DownArrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownArrow.swift; sourceTree = "<group>"; };
 		495D9201258AACC300D19ED9 /* SummaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewController.swift; sourceTree = "<group>"; };
 		49629DCE25875E5400BF5B8A /* EnlargeAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnlargeAnimationController.swift; sourceTree = "<group>"; };
+		4978649C2596C67300FD83EA /* CustomTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableVC.swift; sourceTree = "<group>"; };
 		49A208C325886F4B00084C15 /* Playback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playback.swift; sourceTree = "<group>"; };
 		49A208C8258878FC00084C15 /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
 		49A4A5CD2593D15C0002009B /* AnimationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsVC.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				49AB825C2591851C00B53B32 /* PinchVC.swift */,
 				49F30FB42586DB160021A062 /* PageVC.swift */,
 				49E35FCB25942E5E005CDA8B /* AutoScrollVC.swift */,
+				4978649C2596C67300FD83EA /* CustomTableVC.swift */,
 				49F30FB92586DB2C0021A062 /* SnapVC.swift */,
 				49A4A5E12593DD5A0002009B /* ScrollVC.swift */,
 				49A4A5CD2593D15C0002009B /* AnimationsVC.swift */,
@@ -400,6 +403,7 @@
 				49A208C425886F4B00084C15 /* Playback.swift in Sources */,
 				4949BA9625885773004F083E /* CoverViewController.swift in Sources */,
 				49A4A5CE2593D15C0002009B /* AnimationsVC.swift in Sources */,
+				4978649D2596C67300FD83EA /* CustomTableVC.swift in Sources */,
 				49629DCF25875E5400BF5B8A /* EnlargeAnimationController.swift in Sources */,
 				49E7F0CA2559D0F500F86CC3 /* SceneDelegate.swift in Sources */,
 				4949BA8E2588569E004F083E /* MyPresentationController.swift in Sources */,
