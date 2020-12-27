@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490D127A2598F3D2002AC6E7 /* GpsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D12792598F3D2002AC6E7 /* GpsVC.swift */; };
 		49375D8B25899E4E002730A0 /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49375D8A25899E4E002730A0 /* PlayerVC.swift */; };
 		4949BA6E25885036004F083E /* AppDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4949BA6D25885036004F083E /* AppDataTypes.swift */; };
 		4949BA80258852E0004F083E /* LongPressAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4949BA7F258852E0004F083E /* LongPressAnimationController.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		490D12792598F3D2002AC6E7 /* GpsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GpsVC.swift; sourceTree = "<group>"; };
 		49375D8A25899E4E002730A0 /* PlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
 		4949BA6D25885036004F083E /* AppDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataTypes.swift; sourceTree = "<group>"; };
 		4949BA7F258852E0004F083E /* LongPressAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressAnimationController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				49E35FCB25942E5E005CDA8B /* AutoScrollVC.swift */,
 				4978649C2596C67300FD83EA /* CustomTableVC.swift */,
 				49F30FB92586DB2C0021A062 /* SnapVC.swift */,
+				490D12792598F3D2002AC6E7 /* GpsVC.swift */,
 				49A4A5E12593DD5A0002009B /* ScrollVC.swift */,
 				49A4A5CD2593D15C0002009B /* AnimationsVC.swift */,
 			);
@@ -408,6 +411,7 @@
 				49E7F0CA2559D0F500F86CC3 /* SceneDelegate.swift in Sources */,
 				4949BA8E2588569E004F083E /* MyPresentationController.swift in Sources */,
 				495D91FD258A8D1D00D19ED9 /* DownArrow.swift in Sources */,
+				490D127A2598F3D2002AC6E7 /* GpsVC.swift in Sources */,
 				49A208C9258878FC00084C15 /* AppExtensions.swift in Sources */,
 				495D9202258AACC300D19ED9 /* SummaryTableViewController.swift in Sources */,
 				49C46A712588904900A1F2D6 /* NextSongView.swift in Sources */,

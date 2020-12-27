@@ -25,4 +25,5 @@ struct AnimationName {
     static var page = "Page"
     static var autoScroll = "Auto Scroll"
     static var customTable = "Custom Table"
+    static var gps = "GPS"
 }
