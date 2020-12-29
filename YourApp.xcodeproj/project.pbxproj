@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		490D127A2598F3D2002AC6E7 /* GpsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D12792598F3D2002AC6E7 /* GpsVC.swift */; };
+		4931C8E2259BA1BD00A6C398 /* CarousalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931C8E1259BA1BD00A6C398 /* CarousalVC.swift */; };
 		49375D8B25899E4E002730A0 /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49375D8A25899E4E002730A0 /* PlayerVC.swift */; };
 		4949BA6E25885036004F083E /* AppDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4949BA6D25885036004F083E /* AppDataTypes.swift */; };
 		4949BA80258852E0004F083E /* LongPressAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4949BA7F258852E0004F083E /* LongPressAnimationController.swift */; };
@@ -61,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		490D12792598F3D2002AC6E7 /* GpsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GpsVC.swift; sourceTree = "<group>"; };
+		4931C8E1259BA1BD00A6C398 /* CarousalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarousalVC.swift; sourceTree = "<group>"; };
 		49375D8A25899E4E002730A0 /* PlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
 		4949BA6D25885036004F083E /* AppDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataTypes.swift; sourceTree = "<group>"; };
 		4949BA7F258852E0004F083E /* LongPressAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressAnimationController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				4978649C2596C67300FD83EA /* CustomTableVC.swift */,
 				49F30FB92586DB2C0021A062 /* SnapVC.swift */,
 				490D12792598F3D2002AC6E7 /* GpsVC.swift */,
+				4931C8E1259BA1BD00A6C398 /* CarousalVC.swift */,
 				49A4A5E12593DD5A0002009B /* ScrollVC.swift */,
 				49A4A5CD2593D15C0002009B /* AnimationsVC.swift */,
 			);
@@ -394,6 +397,7 @@
 				494F1FFB257EC97500A2ED34 /* main.swift in Sources */,
 				49375D8B25899E4E002730A0 /* PlayerVC.swift in Sources */,
 				49F30FBA2586DB2C0021A062 /* SnapVC.swift in Sources */,
+				4931C8E2259BA1BD00A6C398 /* CarousalVC.swift in Sources */,
 				4949BA88258855DA004F083E /* ModalViewController.swift in Sources */,
 				49E7F0CC2559D0F500F86CC3 /* MainVC.swift in Sources */,
 				49F30FB52586DB160021A062 /* PageVC.swift in Sources */,
