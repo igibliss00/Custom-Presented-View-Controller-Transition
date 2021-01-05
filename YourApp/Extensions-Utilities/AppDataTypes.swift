@@ -19,6 +19,7 @@ struct CellNames {
 }
 
 struct AnimationName {
+    static var customTransitionVC = "CustomTransitionVC"
     static var prgr = "Pinch Rotate Gesture Recognizer"
     static var snap = "UISnapBehavior"
     static var scroll = "Scroll View Zoom"
@@ -27,4 +28,6 @@ struct AnimationName {
     static var customTable = "Custom Table"
     static var gps = "GPS"
     static var carousal = "Carousal"
+    static var dynamic = "Dynamic"
+    static var activity = "Activity"
 }

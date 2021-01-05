@@ -20,6 +20,13 @@ class PlayerVC: UIViewController {
     var nextSong: NextSongView!
     var timerLabel = UILabel()
 
+    override func loadView() {
+        let screenSize = UIScreen.main.bounds.size
+        let view = UIView(frame: CGRect(origin: .zero, size: .init(width: screenSize.width, height: screenSize.height)))
+        view.backgroundColor = .white
+        self.view = view
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     

@@ -58,7 +58,7 @@ class CustomTableVC: UITableViewController {
         
         // manually refresh
         let leftButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(doRefresh))
-        self.navigationItem.leftBarButtonItem = leftButton
+        self.navigationItem.rightBarButtonItem = leftButton
         self.refreshControl = UIRefreshControl()
         self.refreshControl!.attributedTitle = NSAttributedString(string: "Pull to refresh")
     }

@@ -48,6 +48,7 @@ class GpsVC: UIViewController, UIPageViewControllerDataSource {
             mapView.heightAnchor.constraint(equalTo: view.heightAnchor),
             
             // container view
+            containerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             containerView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
             containerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.2),
             

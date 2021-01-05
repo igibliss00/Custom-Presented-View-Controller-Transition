@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainVC: UIViewController {
+class CustomTransitionVC: UIViewController {
     var mainScrollView = UIScrollView()
     let size = CGSize(width: 150, height: 150)
     lazy var bounds = CGRect(origin: .zero, size: size)
@@ -29,6 +29,13 @@ class MainVC: UIViewController {
         }
         return cards
     }()
+    
+    override func loadView() {
+        let screenSize = UIScreen.main.bounds.size
+        let view = UIView(frame: CGRect(origin: .zero, size: .init(width: screenSize.width, height: screenSize.height)))
+        view.backgroundColor = .white
+        self.view = view
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,10 +83,13 @@ class MainVC: UIViewController {
                 let coverVC = CoverViewController(tag: tappedView.tag, tappedViewFrame: tappedView, tappedLocation: location, window: self.view.window!)
                 self.present(coverVC, animated: true, completion: nil)
             case GestureNames.normal:
-                if let playerVC = storyboard?.instantiateViewController(identifier: "PlayerVC") as? PlayerVC {
-                    playerVC.tag = tappedView.tag
-                    self.present(playerVC, animated: true, completion: nil)
-                }
+//                if let playerVC = storyboard?.instantiateViewController(identifier: "PlayerVC") as? PlayerVC {
+//                    playerVC.tag = tappedView.tag
+//                    self.present(playerVC, animated: true, completion: nil)
+//                }
+                let playerVC = PlayerVC()
+                playerVC.tag = tappedView.tag
+                self.present(playerVC, animated: true, completion: nil)
             case GestureNames.longPress:
                 let modalVC = ModalViewController(tag: tappedView.tag)
                 self.present(modalVC, animated: true, completion: nil)
