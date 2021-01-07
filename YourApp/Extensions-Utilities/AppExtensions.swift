@@ -27,3 +27,11 @@ extension UIColor {
                   alpha: alpha)
     }
 }
+
+// ActivityVC
+extension UIActivity.ActivityType {
+    // Reverse domain name notation
+    static let customActivity = UIActivity.ActivityType("com.example")
+}
+
+

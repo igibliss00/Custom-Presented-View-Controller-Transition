@@ -36,7 +36,7 @@ class DynamicCollectionVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let button = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(doFlush(_:)))
+        let button = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(doFlush(_:)))
         navigationItem.rightBarButtonItem = button
         configureHierarchy()
         configureDataSource()
