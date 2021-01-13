@@ -34,4 +34,22 @@ extension UIActivity.ActivityType {
     static let customActivity = UIActivity.ActivityType("com.example")
 }
 
+// SideMenuVC
+extension UIImage {
+    public convenience init?(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
+        let rect = CGRect(origin: .zero, size: size)
+        let renderer = UIGraphicsImageRenderer(size: rect.size)
+        let newImage = renderer.image { (_) in
+            color.setFill()
+            let path = UIBezierPath(rect: rect)
+            path.fill()
+        }
+        guard let cgImage = newImage.cgImage else { return nil }
+        self.init(cgImage: cgImage)
+    }
+}
 
+// Side Menu VC
+extension Notification.Name {
+    static let CustomViewTapped = Notification.Name("CustomViewTapped")
+}

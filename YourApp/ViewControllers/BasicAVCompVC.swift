@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 import AVKit
 
-class TestVC: UIViewController {
+class BasicAVCompVC: UIViewController {
     var obs = Set<NSKeyValueObservation>()
     var synchLayer : AVSynchronizedLayer!
 
@@ -26,7 +26,7 @@ class TestVC: UIViewController {
         navigationItem.rightBarButtonItem = barButtonItem
         
         
-        let url = Bundle.main.url(forResource: "IMG_2227", withExtension: "mp4")!
+        let url = Bundle.main.url(forResource: "vod", withExtension: "mp4")!
         let asset = AVURLAsset(url:url)
         let item = AVPlayerItem(asset:asset)
         let p = AVPlayer(playerItem:item)

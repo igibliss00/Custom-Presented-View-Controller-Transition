@@ -87,7 +87,7 @@ class CustomActivity: UIActivity {
 
 extension CustomActivity: QLPreviewControllerDataSource {
     override var activityViewController: UIViewController? {
-        print("final", self.finalImage)
+        print("final", self.finalImage!)
         guard let _ = self.finalImage else {
             print("run")
             return nil

@@ -9,7 +9,7 @@ import UIKit
 
 class AnimationsVC: UITableViewController {
     let data = [
-        AnimationName.customTransitionVC, AnimationName.prgr, AnimationName.snap, AnimationName.scroll, AnimationName.page, AnimationName.autoScroll, AnimationName.customTable, AnimationName.gps, AnimationName.carousal, AnimationName.dynamic, AnimationName.activity, "TestVC"
+        AnimationName.customTransitionVC, AnimationName.prgr, AnimationName.snap, AnimationName.scroll, AnimationName.page, AnimationName.autoScroll, AnimationName.customTable, AnimationName.gps, AnimationName.carousal, AnimationName.dynamic, AnimationName.activity, AnimationName.basicAVCompVC, AnimationName.videoEdit, AnimationName.sideMenu
     ]
     
     override func viewDidLoad() {
@@ -68,9 +68,15 @@ class AnimationsVC: UITableViewController {
             case AnimationName.activity:
                 let activityVC = ActivityVC()
                 self.navigationController?.pushViewController(activityVC, animated: true)
-            case "TestVC":
-                let testVC = TestVC()
-                self.navigationController?.pushViewController(testVC, animated: true)
+            case AnimationName.basicAVCompVC:
+                let basicAVCompVC = BasicAVCompVC()
+                self.navigationController?.pushViewController(basicAVCompVC, animated: true)
+            case AnimationName.videoEdit:
+                let videoEdit = VideoEditVC()
+                self.navigationController?.pushViewController(videoEdit, animated: true)
+            case AnimationName.sideMenu:
+                let sideMenu = SideMenuVC()
+                self.navigationController?.pushViewController(sideMenu, animated: true)
             default:
                 break
         }
