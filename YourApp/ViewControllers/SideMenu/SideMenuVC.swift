@@ -31,6 +31,7 @@ class SideMenuVC: UIViewController, SegmentedControlDelegate {
     
     override func loadView() {
         let v = UIView()
+        v.tag = 3000
         v.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         v.backgroundColor = .systemBackground
         view = v
@@ -38,13 +39,13 @@ class SideMenuVC: UIViewController, SegmentedControlDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(customViewTapped), name: .CustomViewTapped, object: nil)
-        
+                
         configureUI()
         configurePageVC()
         configureMenuBar()
         setConstraints()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(customViewTapped), name: .CustomViewTapped, object: nil)
     }
     
     func configureUI() {
@@ -185,11 +186,26 @@ class SideMenuVC: UIViewController, SegmentedControlDelegate {
             self.pageVC.view.alpha = 1
         }
     }
-    
-    @objc func customViewTapped() {
-        transitionType = 2
-        let detailVC = DetailMenuVC()
-        self.present(detailVC, animated: true, completion: nil)
+
+    @objc func customViewTapped(notification: NSNotification) {
+        if let receivedMenuData = notification.userInfo?["menuData"] as? Wrapper<MenuData> {
+            // passing menuData to the animation control as an identifier
+            detailMenuAnimator.menuData = receivedMenuData.wrappedValue
+
+//            self.definesPresentationContext = true
+//            self.providesPresentationContextTransitionStyle = true
+//            self.transitioningDelegate = self
+            transitionType = 2
+            
+            // presenting the detail VC
+            let detailVC = DetailMenuVC()
+            // this allows the custom transition animator's fromView and fromVC to be the current one and not UITabBarVC
+            detailVC.transitioningDelegate = detailMenuAnimator
+            detailVC.modalPresentationStyle = .custom
+            detailVC.menuData = receivedMenuData.wrappedValue
+            self.present(detailVC, animated: true, completion: nil)
+        }
+
     }
 }
 
@@ -206,10 +222,16 @@ extension SideMenuVC: UIViewControllerTransitioningDelegate {
         }
 
     }
-    
+
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        slideInTransitionAnimator.isPresenting = false
-        return slideInTransitionAnimator
+        switch transitionType {
+            case 1:
+                slideInTransitionAnimator.isPresenting = false
+                return slideInTransitionAnimator
+            case 2:
+                return detailMenuAnimator
+            default:
+                return nil
+        }
     }
 }
-

@@ -29,12 +29,13 @@ class SingleMenuPageVC: UIViewController {
 
         configureUI()
         setConstraints()
+        view.tag = 5000
     }
     
     func configureUI() {
         // scroll view
         scrollView = UIScrollView()
-        scrollView.contentSize = CGSize(width: view.bounds.size.width, height: 800)
+        scrollView.contentSize = CGSize(width: view.bounds.size.width, height: 600)
         scrollView.showsVerticalScrollIndicator = false
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(scrollView)
@@ -45,11 +46,11 @@ class SingleMenuPageVC: UIViewController {
         scrollView.addSubview(heroView)
         
         // hero view 2
-        heroView2 = HorizontalHeroView(isHorizontal: false, menuData: menuData[1])
+        heroView2 = HorizontalHeroView(menuData: menuData[1])
         heroView2.translatesAutoresizingMaskIntoConstraints = false
         
         // hero view 3
-        heroView3 = HorizontalHeroView(isHorizontal: false, menuData: menuData[2])
+        heroView3 = HorizontalHeroView(menuData: menuData[2])
         heroView3.translatesAutoresizingMaskIntoConstraints = false
         
         stackView = UIStackView(arrangedSubviews: [heroView2, heroView3])

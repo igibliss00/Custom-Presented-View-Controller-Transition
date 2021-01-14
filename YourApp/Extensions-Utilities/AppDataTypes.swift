@@ -42,30 +42,18 @@ struct MenuData {
     let price: String
 }
 
-class TouchableView: UIView {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        addGesture()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func addGesture() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
-        self.addGestureRecognizer(tap)
-    }
-    
-    @objc func tapHandler() {
-        UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.5, options: .curveEaseIn) {
-            self.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
-        } completion: { (_) in
-            UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.5, options: .curveEaseIn) {
-                self.transform = CGAffineTransform(scaleX: 1, y: 1)
-            } completion: { (_) in
-                NotificationCenter.default.post(name: .CustomViewTapped, object: self)
-            }
-        }
+struct MenuDataKey {
+    static let imageName = "imageName"
+    static let title = "title"
+    static let subTitle = "subTitle"
+    static let price = "price"
+}
+
+// HeroView, HorizontalHeroView
+class Wrapper<T> {
+    var wrappedValue: T
+    init(for value:T) {
+        self.wrappedValue = value
     }
 }
+

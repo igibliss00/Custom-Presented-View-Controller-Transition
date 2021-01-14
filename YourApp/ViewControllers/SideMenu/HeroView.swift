@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HeroView: TouchableView {
+class HeroView: UIView {
     var imageView: UIImageView!
     var containerView: UIView!
     var titleLabel: UILabel!
@@ -17,18 +17,21 @@ class HeroView: TouchableView {
     var menuData: MenuData!
     var animator: UIDynamicAnimator!
     var snapBehavior: UISnapBehavior!
+    var imageConstraints = [NSLayoutConstraint]()
     
-    init(isHorizontal: Bool = true, menuData: MenuData) {
+    init(menuData: MenuData) {
+        self.menuData = menuData
         super.init(frame: .zero)
-        configureUI(menuData: menuData)
+        configureUI()
         setConstraints()
+        addGesture()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureUI(menuData: MenuData) {
+    func configureUI() {
         backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1)
         layer.cornerRadius = 80
         
@@ -79,13 +82,13 @@ class HeroView: TouchableView {
     }
     
     func setConstraints() {
-        NSLayoutConstraint.activate([
-            // image view
+        imageConstraints = [
             imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: -30),
-            imageView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.6),
-            imageView.heightAnchor.constraint(equalTo: self.imageView.widthAnchor),
-            
+            imageView.heightAnchor.constraint(equalToConstant: 200),
+            imageView.widthAnchor.constraint(equalToConstant: 200),
+        ]
+        NSLayoutConstraint.activate(imageConstraints + [            
             // container view
             containerView.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: -30),
             containerView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
@@ -122,4 +125,24 @@ class HeroView: TouchableView {
             return
         }
     }
+    
+    func addGesture() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
+        self.addGestureRecognizer(tap)
+    }
+    
+    @objc func tapHandler() {
+        UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.5, options: .curveEaseIn) {
+            self.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
+        } completion: { (_) in
+            UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.5, options: .curveEaseIn) {
+                self.transform = CGAffineTransform(scaleX: 1, y: 1)
+            } completion: { (_) in
+                let wrappedValue = Wrapper<MenuData>(for: self.menuData)
+                NotificationCenter.default.post(name: .CustomViewTapped, object: self, userInfo: ["menuData" : wrappedValue])
+            }
+        }
+    }
 }
+
+
