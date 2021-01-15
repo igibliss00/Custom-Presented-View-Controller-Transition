@@ -147,7 +147,7 @@ class SideMenuVC: UIViewController, SegmentedControlDelegate {
             self.transitionToNew(menuType)
         }
         menuTableVC.modalPresentationStyle = .overCurrentContext
-        menuTableVC.transitioningDelegate = self
+        menuTableVC.transitioningDelegate = slideInTransitionAnimator
         self.present(menuTableVC, animated: true, completion: nil)
     }
     
@@ -201,37 +201,10 @@ class SideMenuVC: UIViewController, SegmentedControlDelegate {
             let detailVC = DetailMenuVC()
             // this allows the custom transition animator's fromView and fromVC to be the current one and not UITabBarVC
             detailVC.transitioningDelegate = detailMenuAnimator
-            detailVC.modalPresentationStyle = .custom
+            detailVC.modalPresentationStyle = .fullScreen
             detailVC.menuData = receivedMenuData.wrappedValue
             self.present(detailVC, animated: true, completion: nil)
         }
 
-    }
-}
-
-extension SideMenuVC: UIViewControllerTransitioningDelegate {
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        switch transitionType {
-            case 1:
-                slideInTransitionAnimator.isPresenting = true
-                return slideInTransitionAnimator
-            case 2:
-                return detailMenuAnimator
-            default:
-                return nil
-        }
-
-    }
-
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        switch transitionType {
-            case 1:
-                slideInTransitionAnimator.isPresenting = false
-                return slideInTransitionAnimator
-            case 2:
-                return detailMenuAnimator
-            default:
-                return nil
-        }
     }
 }

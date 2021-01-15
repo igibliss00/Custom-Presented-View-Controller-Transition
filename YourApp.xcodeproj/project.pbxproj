@@ -13,6 +13,7 @@
 		491C437625AA8DA7005419C8 /* SlideInTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491C437525AA8DA7005419C8 /* SlideInTransitionAnimator.swift */; };
 		492F570125AE31270052C860 /* HorizontalHeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F570025AE31270052C860 /* HorizontalHeroView.swift */; };
 		4931C8E2259BA1BD00A6C398 /* CarousalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931C8E1259BA1BD00A6C398 /* CarousalVC.swift */; };
+		493415B925B223E5009E6755 /* VerticalHeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493415B825B223E5009E6755 /* VerticalHeroView.swift */; };
 		49375D8B25899E4E002730A0 /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49375D8A25899E4E002730A0 /* PlayerVC.swift */; };
 		4949BA6E25885036004F083E /* AppDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4949BA6D25885036004F083E /* AppDataTypes.swift */; };
 		4949BA80258852E0004F083E /* LongPressAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4949BA7F258852E0004F083E /* LongPressAnimationController.swift */; };
@@ -85,6 +86,7 @@
 		491C437525AA8DA7005419C8 /* SlideInTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransitionAnimator.swift; sourceTree = "<group>"; };
 		492F570025AE31270052C860 /* HorizontalHeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalHeroView.swift; sourceTree = "<group>"; };
 		4931C8E1259BA1BD00A6C398 /* CarousalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarousalVC.swift; sourceTree = "<group>"; };
+		493415B825B223E5009E6755 /* VerticalHeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalHeroView.swift; sourceTree = "<group>"; };
 		49375D8A25899E4E002730A0 /* PlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
 		4949BA6D25885036004F083E /* AppDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataTypes.swift; sourceTree = "<group>"; };
 		4949BA7F258852E0004F083E /* LongPressAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressAnimationController.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				49C9C06D25AE52DB00618980 /* SingleMenuPageVC.swift */,
 				49C9C07325AE865F00618980 /* DetailMenuVC.swift */,
 				49C9C07825AE8F4200618980 /* DetailMenuAnimator.swift */,
+				493415B825B223E5009E6755 /* VerticalHeroView.swift */,
 				497D2F8525AFD46300B38466 /* Temp.swift */,
 			);
 			path = SideMenu;
@@ -499,6 +502,7 @@
 				4949BA9625885773004F083E /* CoverViewController.swift in Sources */,
 				490FAB7425AD01E1008EDCB7 /* CustomSegmentedControl.swift in Sources */,
 				49A4A5CE2593D15C0002009B /* AnimationsVC.swift in Sources */,
+				493415B925B223E5009E6755 /* VerticalHeroView.swift in Sources */,
 				491C437625AA8DA7005419C8 /* SlideInTransitionAnimator.swift in Sources */,
 				4978649D2596C67300FD83EA /* CustomTableVC.swift in Sources */,
 				497CC5C325A9096400AB6F69 /* VideoEditVC.swift in Sources */,

@@ -10,6 +10,7 @@ import UIKit
 class DetailMenuVC: UIViewController {
     var menuData: MenuData!
     var imageView: UIImageView!
+    var backButton: UIButton!
     var titleLabel: UILabel!
     var subTitleLabel: UILabel!
     var desc: UILabel!
@@ -17,11 +18,13 @@ class DetailMenuVC: UIViewController {
     var totalPriceLabel: UILabel!
     var priceLabel: UILabel!
     var cartButton: UIButton!
+    var imageConstraints = [NSLayoutConstraint]()
 
     override func loadView() {
         let v = UIView()
         v.backgroundColor = .systemBackground
         v.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        v.tag = 100
         view = v
     }
     
@@ -30,6 +33,9 @@ class DetailMenuVC: UIViewController {
         configureHeroImage()
         configureUI()
         setConstraints()
+        configureAnimation()
+//        perform(#selector(configureAnimation), with: nil, afterDelay: 0)
+
     }
     
     func configureHeroImage() {
@@ -39,28 +45,38 @@ class DetailMenuVC: UIViewController {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(imageView)
         
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
+        imageConstraints = [
             imageView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: 0.55),
             imageView.heightAnchor.constraint(equalTo: view.widthAnchor),
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 15)
-        ])
+            imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 20)
+        ]
+        
+        NSLayoutConstraint.activate(imageConstraints)
     }
     
     func configureUI() {
+        // back button
+        backButton = UIButton.systemButton(with: UIImage(systemName: "chevron.backward")!, target: self, action: #selector(buttonHandler))
+        backButton.translatesAutoresizingMaskIntoConstraints = false
+        backButton.tintColor = .black
+        backButton.tag = 1
+        view.addSubview(backButton)
+        
         // title
         titleLabel = UILabel()
         titleLabel.text = menuData.title
         titleLabel.font = UIFont.systemFont(ofSize: 25, weight: .heavy)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(titleLabel)
+        titleLabel.alpha = 0
         
         // subtitle
         subTitleLabel = UILabel()
         subTitleLabel.text = menuData.subTitle
         subTitleLabel.font = UIFont.systemFont(ofSize: 15, weight: .heavy)
         subTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        subTitleLabel.alpha = 0
         view.addSubview(subTitleLabel)
         
         // description
@@ -70,6 +86,8 @@ class DetailMenuVC: UIViewController {
             """
         desc.numberOfLines = 0
         desc.translatesAutoresizingMaskIntoConstraints = false
+        desc.alpha = 0
+        desc.isOpaque = false
         view.addSubview(desc)
         
         // arrows
@@ -90,34 +108,47 @@ class DetailMenuVC: UIViewController {
         stackView = UIStackView(arrangedSubviews: [leftArrowIV, numberLabel, rightArrowIV])
         stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.alpha = 0
+        stackView.isOpaque = false
         view.addSubview(stackView)
         
         // price title
         totalPriceLabel = UILabel()
         totalPriceLabel.text = "Total Price"
         totalPriceLabel.translatesAutoresizingMaskIntoConstraints = false
+        totalPriceLabel.alpha = 0
+        totalPriceLabel.isOpaque = false
         view.addSubview(totalPriceLabel)
         
         // price
         priceLabel = UILabel()
         priceLabel.text = menuData.price
         priceLabel.translatesAutoresizingMaskIntoConstraints = false
-        priceLabel.font = UIFont.systemFont(ofSize: 15, weight: .heavy)
+        priceLabel.font = UIFont.systemFont(ofSize: 25, weight: .heavy)
+        priceLabel.alpha = 0
+        priceLabel.isOpaque = false
         view.addSubview(priceLabel)
         
         // cart
-        cartButton = UIButton.systemButton(with: UIImage(systemName: "cart.badge.plus")!, target: self, action: #selector(cartPressed))
+        cartButton = UIButton.systemButton(with: UIImage(systemName: "cart.badge.plus")!, target: self, action: #selector(buttonHandler))
         cartButton.tintColor = .white
         cartButton.translatesAutoresizingMaskIntoConstraints = false
         cartButton.backgroundColor = .black
-        cartButton.layer.cornerRadius = cartButton.bounds.size.width / 2
+        cartButton.layer.cornerRadius = 50
+        cartButton.alpha = 0
         view.addSubview(cartButton)
     }
     
     func setConstraints() {
         NSLayoutConstraint.activate([
+            // back button
+            backButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            backButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
+            backButton.widthAnchor.constraint(equalToConstant: 50),
+            backButton.heightAnchor.constraint(equalToConstant: 50),
+            
             // title label
-            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            titleLabel.topAnchor.constraint(equalTo: backButton.bottomAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 10),
             titleLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6),
             titleLabel.heightAnchor.constraint(equalToConstant: 50),
@@ -129,7 +160,7 @@ class DetailMenuVC: UIViewController {
             // description
             desc.topAnchor.constraint(equalTo: subTitleLabel.bottomAnchor, constant: 10),
             desc.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 10),
-            desc.heightAnchor.constraint(equalToConstant: 200),
+            desc.heightAnchor.constraint(equalToConstant: 120),
             desc.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 10),
             desc.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -10),
             
@@ -140,7 +171,7 @@ class DetailMenuVC: UIViewController {
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             
             // price title
-            totalPriceLabel.bottomAnchor.constraint(equalTo: priceLabel.topAnchor, constant: 10),
+            totalPriceLabel.bottomAnchor.constraint(equalTo: priceLabel.topAnchor, constant: -10),
             totalPriceLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 10),
             
             // price
@@ -155,7 +186,39 @@ class DetailMenuVC: UIViewController {
         ])
     }
     
-    @objc func cartPressed() {
-        
+    @objc func buttonHandler(_ sender: UIButton) {
+        if case let tag = sender.tag, tag == 1 {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func configureAnimation() {
+        let animation = UIViewPropertyAnimator(duration: 3, curve: .linear)
+        animation.addAnimations {
+            UIView.animateKeyframes(withDuration: 0, delay: 0, animations: {
+                UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.2) { [weak self] in
+                    self?.titleLabel.alpha = 1
+                    self?.stackView.alpha = 1
+                }
+
+                UIView.addKeyframe(withRelativeStartTime: 0.2, relativeDuration: 0.2) { [weak self] in
+                    self?.subTitleLabel.alpha = 1
+                    self?.desc.alpha = 1
+                }
+
+                UIView.addKeyframe(withRelativeStartTime: 0.4, relativeDuration: 0.2) { [weak self] in
+                    self?.totalPriceLabel.alpha = 1
+                }
+
+                UIView.addKeyframe(withRelativeStartTime: 0.6, relativeDuration: 0.2) { [weak self] in
+                    self?.priceLabel.alpha = 1
+                }
+
+                UIView.addKeyframe(withRelativeStartTime: 0.8, relativeDuration: 0.2) { [weak self] in
+                    self?.cartButton.alpha = 1
+                }
+            }, completion: nil)
+        }
+        animation.startAnimation()
     }
 }
