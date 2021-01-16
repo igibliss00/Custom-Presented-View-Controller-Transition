@@ -188,7 +188,7 @@ class DetailMenuVC: UIViewController {
     
     @objc func buttonHandler(_ sender: UIButton) {
         if case let tag = sender.tag, tag == 1 {
-            self.dismiss(animated: true, completion: nil)
+            self.presentingViewController?.dismiss(animated: true, completion: nil)
         }
     }
     

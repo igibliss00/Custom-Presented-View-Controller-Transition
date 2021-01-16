@@ -62,10 +62,12 @@ class SlideInTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning
 
 extension SlideInTransitionAnimator: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        self.isPresenting = true
         return self
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        self.isPresenting = false
         return self
     }
 }

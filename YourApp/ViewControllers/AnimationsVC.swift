@@ -9,7 +9,7 @@ import UIKit
 
 class AnimationsVC: UITableViewController {
     let data = [
-        AnimationName.customTransitionVC, AnimationName.prgr, AnimationName.snap, AnimationName.scroll, AnimationName.page, AnimationName.autoScroll, AnimationName.customTable, AnimationName.gps, AnimationName.carousal, AnimationName.dynamic, AnimationName.activity, AnimationName.basicAVCompVC, AnimationName.videoEdit, AnimationName.sideMenu
+        AnimationName.customTransitionVC, AnimationName.prgr, AnimationName.snap, AnimationName.scroll, AnimationName.page, AnimationName.autoScroll, AnimationName.customTable, AnimationName.gps, AnimationName.carousal, AnimationName.dynamic, AnimationName.activity, AnimationName.basicAVCompVC, AnimationName.videoEdit, AnimationName.sideMenu, AnimationName.myWallet
     ]
     
     override func viewDidLoad() {
@@ -77,6 +77,9 @@ class AnimationsVC: UITableViewController {
             case AnimationName.sideMenu:
                 let sideMenu = SideMenuVC()
                 self.navigationController?.pushViewController(sideMenu, animated: true)
+            case AnimationName.myWallet:
+                let billingMaster = BillingMasterVC()
+                self.navigationController?.pushViewController(billingMaster, animated: true)
             default:
                 break
         }

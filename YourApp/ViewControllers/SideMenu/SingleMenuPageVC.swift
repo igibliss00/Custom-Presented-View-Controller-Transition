@@ -19,9 +19,9 @@ class SingleMenuPageVC: UIViewController {
     }
     
     var scrollView: UIScrollView!
-    var heroView: HeroView!
-    var heroView2: HorizontalHeroView!
-    var heroView3: HorizontalHeroView!
+    var heroView: HorizontalHeroView!
+    var heroView2: VerticalHeroView!
+    var heroView3: VerticalHeroView!
     var stackView: UIStackView!
     
     override func viewDidLoad() {
@@ -41,16 +41,16 @@ class SingleMenuPageVC: UIViewController {
         view.addSubview(scrollView)
         
         // hero view 1
-        heroView = HeroView(menuData: menuData[0])
+        heroView = HorizontalHeroView(menuData: menuData[0])
         heroView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.addSubview(heroView)
         
         // hero view 2
-        heroView2 = HorizontalHeroView(menuData: menuData[1])
+        heroView2 = VerticalHeroView(menuData: menuData[1])
         heroView2.translatesAutoresizingMaskIntoConstraints = false
         
         // hero view 3
-        heroView3 = HorizontalHeroView(menuData: menuData[2])
+        heroView3 = VerticalHeroView(menuData: menuData[2])
         heroView3.translatesAutoresizingMaskIntoConstraints = false
         
         stackView = UIStackView(arrangedSubviews: [heroView2, heroView3])
@@ -76,22 +76,22 @@ class SingleMenuPageVC: UIViewController {
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            // hero view
+            // horizontal hero view
             heroView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             heroView.leadingAnchor.constraint(equalTo: scrollView.layoutMarginsGuide.leadingAnchor, constant: 10),
             heroView.trailingAnchor.constraint(equalTo: scrollView.layoutMarginsGuide.trailingAnchor, constant: -10),
             heroView.heightAnchor.constraint(equalToConstant: 150),
             
-            // stack view
+            // stack view for the vertical hero views
             stackView.topAnchor.constraint(equalTo: heroView.bottomAnchor, constant: 50),
             stackView.heightAnchor.constraint(equalToConstant: 250),
             stackView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, multiplier: 0.8),
             
-            // hero view 2
+            // vertical hero view 2
             heroView2.widthAnchor.constraint(equalToConstant: 120),
             
-            // hero view 3
+            // vertical hero view 3
             heroView3.widthAnchor.constraint(equalToConstant: 120),
         ])
     }

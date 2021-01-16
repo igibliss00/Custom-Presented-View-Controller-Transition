@@ -33,6 +33,7 @@ struct AnimationName {
     static let basicAVCompVC = "Basic AVComposition"
     static let videoEdit = "Video Edit"
     static let sideMenu = "Side Menu"
+    static let myWallet = "My Wallet"
 }
 
 struct MenuData {
@@ -57,3 +58,22 @@ class Wrapper<T> {
     }
 }
 
+protocol Transferable {
+    var constant: CGFloat { get set }
+    var attribute: NSLayoutConstraint.Attribute { get }
+    var relatedBy: NSLayoutConstraint.Relation { get }
+}
+
+struct TransferableConstrainst: Transferable {
+    var attribute: NSLayoutConstraint.Attribute
+    let relatedBy: NSLayoutConstraint.Relation
+    let attribute2: NSLayoutConstraint.Attribute
+    let multiplier: CGFloat
+    var constant: CGFloat
+}
+
+struct TransferableConstantAnchor: Transferable {
+    let attribute: NSLayoutConstraint.Attribute
+    var constant: CGFloat
+    var relatedBy: NSLayoutConstraint.Relation
+}
