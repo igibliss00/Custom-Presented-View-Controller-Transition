@@ -78,8 +78,8 @@ class AnimationsVC: UITableViewController {
                 let sideMenu = SideMenuVC()
                 self.navigationController?.pushViewController(sideMenu, animated: true)
             case AnimationName.myWallet:
-                let billingMaster = BillingMasterVC()
-                self.navigationController?.pushViewController(billingMaster, animated: true)
+                let myWalletVC = MyWalletVC()
+                self.navigationController?.pushViewController(myWalletVC, animated: true)
             default:
                 break
         }
