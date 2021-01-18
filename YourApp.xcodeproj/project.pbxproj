@@ -13,6 +13,8 @@
 		491BECFF25B4FA2600F00071 /* TopHeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491BECFE25B4FA2600F00071 /* TopHeroView.swift */; };
 		491BED0425B4FABD00F00071 /* MyWalletOverviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491BED0325B4FABD00F00071 /* MyWalletOverviewVC.swift */; };
 		491C437625AA8DA7005419C8 /* SlideInTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491C437525AA8DA7005419C8 /* SlideInTransitionAnimator.swift */; };
+		4921852725B5F37E00C62A80 /* MyWalletDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4921852625B5F37E00C62A80 /* MyWalletDataController.swift */; };
+		4921852F25B6107800C62A80 /* WalletDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4921852E25B6107800C62A80 /* WalletDetailVC.swift */; };
 		492F570125AE31270052C860 /* HorizontalHeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F570025AE31270052C860 /* HorizontalHeroView.swift */; };
 		4931C8E2259BA1BD00A6C398 /* CarousalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931C8E1259BA1BD00A6C398 /* CarousalVC.swift */; };
 		493415B925B223E5009E6755 /* VerticalHeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493415B825B223E5009E6755 /* VerticalHeroView.swift */; };
@@ -33,6 +35,8 @@
 		4962788F25AD4F6A00EABDD6 /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4962788E25AD4F6A00EABDD6 /* HeroView.swift */; };
 		49629DCF25875E5400BF5B8A /* EnlargeAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49629DCE25875E5400BF5B8A /* EnlargeAnimationController.swift */; };
 		496ABFAF25B387860098EB62 /* MyWalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496ABFAE25B387860098EB62 /* MyWalletVC.swift */; };
+		497138F025B551AD0008EEDC /* ListCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497138EF25B551AD0008EEDC /* ListCustomCell.swift */; };
+		497138F525B554420008EEDC /* TitleSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497138F425B554420008EEDC /* TitleSupplementaryView.swift */; };
 		4978649D2596C67300FD83EA /* CustomTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4978649C2596C67300FD83EA /* CustomTableVC.swift */; };
 		497CC5C325A9096400AB6F69 /* VideoEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497CC5C225A9096400AB6F69 /* VideoEditVC.swift */; };
 		497CC5D125A90AE000AB6F69 /* rod.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 497CC5D025A90AE000AB6F69 /* rod.mp3 */; };
@@ -51,6 +55,8 @@
 		49E0C3F925A4FB91005688F6 /* ActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E0C3F825A4FB91005688F6 /* ActivityVC.swift */; };
 		49E0C40425A57530005688F6 /* BasicAVCompVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E0C40325A57530005688F6 /* BasicAVCompVC.swift */; };
 		49E35FCC25942E5E005CDA8B /* AutoScrollVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E35FCB25942E5E005CDA8B /* AutoScrollVC.swift */; };
+		49E41D6725B5443700E0A822 /* CardCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E41D6625B5443700E0A822 /* CardCustomCell.swift */; };
+		49E41D6C25B544F300E0A822 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E41D6B25B544F300E0A822 /* CustomButton.swift */; };
 		49E7F0C82559D0F500F86CC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E7F0C72559D0F500F86CC3 /* AppDelegate.swift */; };
 		49E7F0CA2559D0F500F86CC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E7F0C92559D0F500F86CC3 /* SceneDelegate.swift */; };
 		49E7F0CC2559D0F500F86CC3 /* CustomTransitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E7F0CB2559D0F500F86CC3 /* CustomTransitionVC.swift */; };
@@ -89,6 +95,8 @@
 		491BECFE25B4FA2600F00071 /* TopHeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeroView.swift; sourceTree = "<group>"; };
 		491BED0325B4FABD00F00071 /* MyWalletOverviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletOverviewVC.swift; sourceTree = "<group>"; };
 		491C437525AA8DA7005419C8 /* SlideInTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransitionAnimator.swift; sourceTree = "<group>"; };
+		4921852625B5F37E00C62A80 /* MyWalletDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletDataController.swift; sourceTree = "<group>"; };
+		4921852E25B6107800C62A80 /* WalletDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletDetailVC.swift; sourceTree = "<group>"; };
 		492F570025AE31270052C860 /* HorizontalHeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalHeroView.swift; sourceTree = "<group>"; };
 		4931C8E1259BA1BD00A6C398 /* CarousalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarousalVC.swift; sourceTree = "<group>"; };
 		493415B825B223E5009E6755 /* VerticalHeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalHeroView.swift; sourceTree = "<group>"; };
@@ -112,6 +120,8 @@
 		4962788E25AD4F6A00EABDD6 /* HeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
 		49629DCE25875E5400BF5B8A /* EnlargeAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnlargeAnimationController.swift; sourceTree = "<group>"; };
 		496ABFAE25B387860098EB62 /* MyWalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletVC.swift; sourceTree = "<group>"; };
+		497138EF25B551AD0008EEDC /* ListCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCustomCell.swift; sourceTree = "<group>"; };
+		497138F425B554420008EEDC /* TitleSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSupplementaryView.swift; sourceTree = "<group>"; };
 		4978649C2596C67300FD83EA /* CustomTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableVC.swift; sourceTree = "<group>"; };
 		497CC5C225A9096400AB6F69 /* VideoEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEditVC.swift; sourceTree = "<group>"; };
 		497CC5D025A90AE000AB6F69 /* rod.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = rod.mp3; path = ../../../Downloads/rod.mp3; sourceTree = "<group>"; };
@@ -130,6 +140,8 @@
 		49E0C3F825A4FB91005688F6 /* ActivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityVC.swift; sourceTree = "<group>"; };
 		49E0C40325A57530005688F6 /* BasicAVCompVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAVCompVC.swift; sourceTree = "<group>"; };
 		49E35FCB25942E5E005CDA8B /* AutoScrollVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoScrollVC.swift; sourceTree = "<group>"; };
+		49E41D6625B5443700E0A822 /* CardCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCustomCell.swift; sourceTree = "<group>"; };
+		49E41D6B25B544F300E0A822 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		49E7F0C42559D0F500F86CC3 /* YourApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E7F0C72559D0F500F86CC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49E7F0C92559D0F500F86CC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -276,6 +288,12 @@
 				496ABFAE25B387860098EB62 /* MyWalletVC.swift */,
 				491BECFE25B4FA2600F00071 /* TopHeroView.swift */,
 				491BED0325B4FABD00F00071 /* MyWalletOverviewVC.swift */,
+				49E41D6625B5443700E0A822 /* CardCustomCell.swift */,
+				49E41D6B25B544F300E0A822 /* CustomButton.swift */,
+				497138EF25B551AD0008EEDC /* ListCustomCell.swift */,
+				497138F425B554420008EEDC /* TitleSupplementaryView.swift */,
+				4921852E25B6107800C62A80 /* WalletDetailVC.swift */,
+				4921852625B5F37E00C62A80 /* MyWalletDataController.swift */,
 			);
 			path = MyWallet;
 			sourceTree = "<group>";
@@ -491,10 +509,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4921852725B5F37E00C62A80 /* MyWalletDataController.swift in Sources */,
 				49E0C40425A57530005688F6 /* BasicAVCompVC.swift in Sources */,
 				494F1FF6257EC94200A2ED34 /* MyApplication.swift in Sources */,
 				49A4A5E22593DD5A0002009B /* ScrollVC.swift in Sources */,
 				4949BA80258852E0004F083E /* LongPressAnimationController.swift in Sources */,
+				49E41D6C25B544F300E0A822 /* CustomButton.swift in Sources */,
 				494F1FFB257EC97500A2ED34 /* main.swift in Sources */,
 				49375D8B25899E4E002730A0 /* PlayerVC.swift in Sources */,
 				49F30FBA2586DB2C0021A062 /* SnapVC.swift in Sources */,
@@ -517,6 +537,7 @@
 				49EF59A1259BE8F800E69E64 /* DynamicCollectionVC.swift in Sources */,
 				49AB825D2591851C00B53B32 /* PinchVC.swift in Sources */,
 				49A208C425886F4B00084C15 /* Playback.swift in Sources */,
+				4921852F25B6107800C62A80 /* WalletDetailVC.swift in Sources */,
 				4949BA9625885773004F083E /* CoverViewController.swift in Sources */,
 				490FAB7425AD01E1008EDCB7 /* CustomSegmentedControl.swift in Sources */,
 				49A4A5CE2593D15C0002009B /* AnimationsVC.swift in Sources */,
@@ -530,11 +551,14 @@
 				4949BA8E2588569E004F083E /* MyPresentationController.swift in Sources */,
 				495D91FD258A8D1D00D19ED9 /* DownArrow.swift in Sources */,
 				490D127A2598F3D2002AC6E7 /* GpsVC.swift in Sources */,
+				49E41D6725B5443700E0A822 /* CardCustomCell.swift in Sources */,
 				49C9C06925AE4FA900618980 /* MenuBar.swift in Sources */,
 				49C9C07425AE865F00618980 /* DetailMenuVC.swift in Sources */,
 				491BECFF25B4FA2600F00071 /* TopHeroView.swift in Sources */,
 				49A208C9258878FC00084C15 /* AppExtensions.swift in Sources */,
+				497138F525B554420008EEDC /* TitleSupplementaryView.swift in Sources */,
 				49EF59A7259BE95F00E69E64 /* ProductCell.swift in Sources */,
+				497138F025B551AD0008EEDC /* ListCustomCell.swift in Sources */,
 				495D9202258AACC300D19ED9 /* SummaryTableViewController.swift in Sources */,
 				4962788F25AD4F6A00EABDD6 /* HeroView.swift in Sources */,
 				49C46A712588904900A1F2D6 /* NextSongView.swift in Sources */,

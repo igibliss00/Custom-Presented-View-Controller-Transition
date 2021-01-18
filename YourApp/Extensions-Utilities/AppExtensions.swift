@@ -74,3 +74,34 @@ extension CGContext {
         restoreGState()
     }
 }
+
+// My Wallet VC
+extension NSMutableAttributedString {
+    func addImageAttachment(image: UIImage, font: UIFont, textColor: UIColor, size: CGSize? = nil) {
+        let textAttributes: [NSAttributedString.Key: Any] = [
+            .strokeColor: textColor,
+            .foregroundColor: textColor,
+            .font: font
+        ]
+        
+        self.append(
+            NSAttributedString.init(
+                //U+200C (zero-width non-joiner) is a non-printing character. It will not paste unnecessary space.
+                string: "\u{200c}",
+                attributes: textAttributes
+            )
+        )
+        
+        let attachment = NSTextAttachment()
+        attachment.image = image.withRenderingMode(.alwaysTemplate)
+        let attachmentString = NSMutableAttributedString(attachment: attachment)
+        attachmentString.addAttributes(
+            textAttributes,
+            range: NSMakeRange(
+                0,
+                attachmentString.length
+            )
+        )
+        self.append(attachmentString)
+    }
+}

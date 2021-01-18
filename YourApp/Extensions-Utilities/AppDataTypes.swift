@@ -36,6 +36,8 @@ struct AnimationName {
     static let myWallet = "My Wallet"
 }
 
+// MARK: - SideMenu
+
 struct MenuData {
     let imageName: String
     let title: String
@@ -77,3 +79,7 @@ struct TransferableConstantAnchor: Transferable {
     var constant: CGFloat
     var relatedBy: NSLayoutConstraint.Relation
 }
+
+// MARK: - My Wallet
+
+

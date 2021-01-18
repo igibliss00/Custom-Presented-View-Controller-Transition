@@ -7,25 +7,29 @@
 
 import UIKit
 
-struct CardData {
-    let bankName: String
-    let balance: String
-    let cardNumber: String
-    let backgroundColor: UIColor
-}
-
-
 class MyWalletOverviewVC: UIViewController {
-    let data = [
-        CardData(bankName: "RBC Bank", balance: "$2.320", cardNumber: "3423", backgroundColor: UIColor(red: 51/255, green: 153/255, blue: 255/255, alpha: 1)),
-        CardData(bankName: "TD Bank", balance: "$3.50", cardNumber: "2389", backgroundColor: UIColor(red: 51/255, green: 255/255, blue: 51/255, alpha: 1)),
-        CardData(bankName: "Tangerine", balance: "$3983.20", cardNumber: "9482", backgroundColor: UIColor(red: 153/255, green: 51/255, blue: 255/255, alpha: 1)),
-        CardData(bankName: "Scotiabank", balance: "$1294.50", cardNumber: "3921", backgroundColor: UIColor(red: 255/255, green: 51/255, blue: 255/255, alpha: 1))
-    ]
+    enum SectionLayoutKind: Int, CaseIterable {
+        case cardData, listData
+        var section: String {
+            switch self {
+                case .cardData:
+                    return "Card Data"
+                case .listData:
+                    return "List Data"
+            }
+        }
+    }
     
-    var scrollView: UIScrollView!
-    var dataSource: UICollectionViewDiffableDataSource<SectionLayoutKind, Int>! = nil
+    static let sectionHeaderElementKind = "section-header-element-kind"
+    let myWalletDataController = MyWalletDataController()
+    var dataSource: UICollectionViewDiffableDataSource<MyWalletDataController.WalletSection, MyWalletDataController.WalletData>! = nil
     var collectionView: UICollectionView! = nil
+    var currentSnapshot: NSDiffableDataSourceSnapshot<MyWalletDataController.WalletSection, MyWalletDataController.WalletData>! = nil
+    
+    private func calculatePreferredSize() {
+        let targetSize = CGSize(width: view.bounds.width, height: UIView.layoutFittingCompressedSize.height)
+        preferredContentSize = view.systemLayoutSizeFitting(targetSize)
+    }
     
     override func loadView() {
         let v = UIView()
@@ -39,87 +43,132 @@ class MyWalletOverviewVC: UIViewController {
         
         configureHierarchy()
         configureDataSource()
-        configureCardUI()
-        setConstraints()
     }
     
-    func configureCardUI() {
-        scrollView = UIScrollView()
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(scrollView)
+    // resize the parent vc according to this current vc
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        calculatePreferredSize()
     }
-    
-    func setConstraints() {
-        NSLayoutConstraint.activate([
-            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            scrollView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5)
-        ])
-    }
+
 }
 
 // MARK: - collection view layout
 
 extension MyWalletOverviewVC {
-    enum SectionLayoutKind: Int, CaseIterable {
-        case horizontal, vertical
-        var orientation: String {
-            switch self {
-                case .horizontal:
-                    return "horizontal"
-                case .vertical:
-                    return "vertical"
+    func createLayout() -> UICollectionViewLayout {
+        let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+            guard let sectionLayoutKind = SectionLayoutKind(rawValue: sectionIndex) else { return nil }
+            let sectionType = sectionLayoutKind.section
+
+            var group: NSCollectionLayoutGroup!
+            if sectionType == "Card Data" {
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+                
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.85), heightDimension: .absolute(150))
+                group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+                
+                let section = NSCollectionLayoutSection(group: group)
+                section.orthogonalScrollingBehavior = .groupPaging
+                section.interGroupSpacing = 20
+                section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
+                
+                let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(44))
+                let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: MyWalletOverviewVC.sectionHeaderElementKind, alignment: .top)
+                section.boundarySupplementaryItems = [sectionHeader]
+                return section
+            } else {
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+                
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(100))
+                group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
+                
+                let section = NSCollectionLayoutSection(group: group)
+                section.interGroupSpacing = 10
+                section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
+                
+                let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(100))
+                let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: MyWalletOverviewVC.sectionHeaderElementKind, alignment: .top)
+                section.boundarySupplementaryItems = [sectionHeader]
+                return section
             }
         }
-    }
-    
-    func configureHierarchy() {
-        //        func createLayout() -> UICollectionViewLayout {
-        //            let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
-        //                guard let sectionLayoutKind = SectionLayoutKind(rawValue: sectionIndex) else { return nil }
-        //                let orientation = sectionLayoutKind.orientation
-        //
-        //                if orientation == "horizontal" {
-        //                    let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(<#T##fractionalWidth: CGFloat##CGFloat#>), heightDimension: <#T##NSCollectionLayoutDimension#>)
-        //                } else {
-        //
-        //                }
-        //
-        //            }
-        //        }
-    }
-    
-    func configureDataSource() {
         
+        return layout
     }
 }
 
+// MARK:- hierarchy, data source
 
-class Card: UIView {
+extension MyWalletOverviewVC {
+    func configureHierarchy() {
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
+        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        collectionView.backgroundColor = .systemBackground
+        view.addSubview(collectionView)
+        collectionView.delegate = self
+    }
     
-    init() {
-        super.init(frame: .zero)
+    func configureDataSource() {
+        let cardCellRegistration = UICollectionView.CellRegistration<CardCustomCell, MyWalletDataController.CardData>{ (cell, indexPath, cards) in
+            // title
+            let content = NSMutableAttributedString(string: cards.title)
+            
+            let attributedAttachment = NSMutableAttributedString()
+            if let image = UIImage.init(systemName: cards.isIncreased ? "arrow.up" : "arrow.down") {
+                attributedAttachment.addImageAttachment(image: image, font: .systemFont(ofSize: 40), textColor: cards.isIncreased ? .cyan : .red)
+            }
+            
+            content.insert(attributedAttachment, at: 0)
+            cell.titleLabel.attributedText = content
+            
+            // subtitle
+            cell.subtitleLabel.text = cards.subTitle
+        }
         
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override var frame: CGRect {
-        didSet {
-            self.layoutIfNeeded()
+        let listCellRegistration = UICollectionView.CellRegistration<ListCustomCell, MyWalletDataController.ListData> { (cell, indexPath, lists) in
+            cell.vendorLabel.text = lists.vendor
+            cell.dateLabel.text = lists.date
+            cell.amountLabel.text = lists.amount
         }
-    }
-    
-    override var bounds: CGRect {
-        didSet {
-            self.layoutIfNeeded()
+        
+        let headerRegistration = UICollectionView.SupplementaryRegistration<TitleSupplementaryView>(elementKind: MyWalletOverviewVC.sectionHeaderElementKind) { (supplementaryView, string, indexPath) in
+            if let snapshot = self.currentSnapshot {
+                let walletCategory = snapshot.sectionIdentifiers[indexPath.section]
+                supplementaryView.label.text = walletCategory.title
+                supplementaryView.label.font = UIFont.systemFont(ofSize: 17, weight: .heavy)
+                supplementaryView.label.textColor = .lightGray
+            }
         }
+        
+        dataSource = UICollectionViewDiffableDataSource<MyWalletDataController.WalletSection, MyWalletDataController.WalletData>(collectionView: collectionView, cellProvider: { (collectionView: UICollectionView, indexPath: IndexPath, walletData: MyWalletDataController.WalletData) -> UICollectionViewCell? in
+            return SectionLayoutKind(rawValue: indexPath.section)! == .cardData ?
+                collectionView.dequeueConfiguredReusableCell(using: cardCellRegistration, for: indexPath, item: walletData as? MyWalletDataController.CardData) :
+                collectionView.dequeueConfiguredReusableCell(using: listCellRegistration, for: indexPath, item: walletData as? MyWalletDataController.ListData)
+        })
+        
+        dataSource.supplementaryViewProvider = { (view, kind, index) in
+            return self.collectionView.dequeueConfiguredReusableSupplementary(using: headerRegistration, for: index)
+        }
+        
+        currentSnapshot = NSDiffableDataSourceSnapshot<MyWalletDataController.WalletSection, MyWalletDataController.WalletData>()
+        myWalletDataController.data.forEach {
+            let section = $0
+            currentSnapshot.appendSections([section])
+            currentSnapshot.appendItems(section.walletData)
+        }
+        dataSource.apply(currentSnapshot, animatingDifferences: false)
     }
-    
-    func configureUI() {
-        self.layer.cornerRadius = self.bounds.width / 2
+}
+
+// MARK:- didSelectItemAt
+
+extension MyWalletOverviewVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
     }
 }
