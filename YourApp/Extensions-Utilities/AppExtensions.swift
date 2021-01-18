@@ -52,4 +52,25 @@ extension UIImage {
 // Side Menu VC
 extension Notification.Name {
     static let CustomViewTapped = Notification.Name("CustomViewTapped")
+    static let TopHeroViewTapped = Notification.Name("TopHeroViewTapped")
+}
+
+// My Wallet VC
+extension CGContext {
+    func drawLinearGradient(in rect: CGRect, startingWith startColor: CGColor, finishingWith endColor: CGColor) {
+        let colorsSpace = CGColorSpaceCreateDeviceRGB()
+        let colors = [startColor, endColor] as CFArray
+        let locations = [0.0, 1.0] as [CGFloat]
+        
+        guard let gradient = CGGradient(colorsSpace: colorsSpace, colors: colors, locations: locations) else { return }
+        
+        let startPoint = CGPoint(x: rect.maxX, y: rect.maxY)
+        let endPoint = CGPoint(x: rect.minX, y: rect.minY)
+        
+        saveGState()
+        addRect(rect)
+        clip()
+        drawLinearGradient(gradient, start: startPoint, end: endPoint, options: CGGradientDrawingOptions())
+        restoreGState()
+    }
 }

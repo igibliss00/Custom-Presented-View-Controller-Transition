@@ -9,12 +9,11 @@ import UIKit
 
 class MyWalletVC: UIViewController {
     var scrollView: UIScrollView!
-    var topHeroView: TopHeroView!
+    var heroView: TopHeroView!
     var stackView: UIStackView!
     
     override func loadView() {
         let v = UIView()
-        v.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         v.backgroundColor = .systemBackground
         view = v
     }
@@ -22,23 +21,16 @@ class MyWalletVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(topHerViewHandler), name: .TopHeroViewTapped, object: nil)
+        
         configureNavigationBar()
         configureUI()
         setConstraints()
     }
     
     func configureNavigationBar() {
-        // left bar button
-        let leftBarButton = UIBarButtonItem(image: UIImage(systemName: "arrow.left"), style: .plain, target: self, action: nil)
-        leftBarButton.tintColor = .black
-        self.navigationItem.leftBarButtonItem = leftBarButton
-        
-        // shadow border
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithDefaultBackground()
-        appearance.shadowColor = .clear
-        appearance.backgroundColor = .white
-        navigationController?.navigationBar.standardAppearance = appearance
+        view.insetsLayoutMarginsFromSafeArea = false
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     func configureUI() {
@@ -47,12 +39,15 @@ class MyWalletVC: UIViewController {
         scrollView.showsVerticalScrollIndicator = false
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.contentSize = CGSize(width: view.bounds.size.width, height: 800)
+        let window = UIApplication.shared.windows[0]
+        let topPadding = window.safeAreaInsets.top
+        scrollView.contentInset = UIEdgeInsets(top: -topPadding, left: 0, bottom: 0, right: 0)
         view.addSubview(scrollView)
         
         // hero view
-        topHeroView = TopHeroView()
-        topHeroView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(topHeroView)
+        heroView = TopHeroView()
+        heroView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.addSubview(heroView)
     }
     
     func setConstraints() {
@@ -64,26 +59,49 @@ class MyWalletVC: UIViewController {
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             // hero view
-            topHeroView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            topHeroView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            topHeroView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            topHeroView.heightAnchor.constraint(equalToConstant: 300),
-            
+            heroView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            heroView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            heroView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            heroView.heightAnchor.constraint(equalToConstant: 300),
+            heroView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, multiplier: 1),
         ])
+    }
+    
+    @objc func topHerViewHandler() {
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
-class TopHeroView: UIView {
-    init() {
-        super.init(frame: .zero)
-        configureUI()
-    }
+
+
+
+//    func createBalanceLabelSeries(text: [String], previous: UIView?) -> (UILabel?, [NSLayoutConstraint]) {
+////        guard let previous = previous else { return nil }
+//        let previous = previous!
+//        balanceLabelArr = [UILabel]()
+//        var constraints = [NSLayoutConstraint]()
+//        for i in 0...text.count - 1 {
+////            let bl = createBalanceLabel(text: text[i])
+//            let label = UILabel()
+//            label.translatesAutoresizingMaskIntoConstraints = false
+//            label.textColor = .white
+//            label.text = text[i]
+//            balanceMaskView.addSubview(label)
+//
+//            balanceLabelArr.append(label)
+////            guard let index = balanceLabelArr.firstIndex(of: label) else { return nil }
+//            let index = balanceLabelArr.firstIndex(of: label)!
+//            constraints.append(label.topAnchor.constraint(equalTo: balanceMaskView.topAnchor))
+//            constraints.append(label.widthAnchor.constraint(equalTo: balanceMaskView.widthAnchor, multiplier: 1/5))
+//            if index == 0 {
+//                print("prev", previous)
+//                constraints.append(label.leadingAnchor.constraint(equalTo: previous.trailingAnchor))
+//            } else {
+//                constraints.append(label.leadingAnchor.constraint(equalTo: balanceLabelArr[index - 1].trailingAnchor))
+//            }
+//        }
+
+//        NSLayoutConstraint.activate(constraints)
+//        return (balanceLabelArr[balanceLabelArr.count - 1], constraints)
+//    }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func configureUI() {
-        self.backgroundColor = .blue
-    }
-}

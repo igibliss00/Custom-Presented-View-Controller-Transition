@@ -10,6 +10,8 @@
 		490D127A2598F3D2002AC6E7 /* GpsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D12792598F3D2002AC6E7 /* GpsVC.swift */; };
 		490FAB7425AD01E1008EDCB7 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490FAB7325AD01E1008EDCB7 /* CustomSegmentedControl.swift */; };
 		491BD05225A6A946004C7B36 /* vod.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 491BD05125A6A920004C7B36 /* vod.mp4 */; };
+		491BECFF25B4FA2600F00071 /* TopHeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491BECFE25B4FA2600F00071 /* TopHeroView.swift */; };
+		491BED0425B4FABD00F00071 /* MyWalletOverviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491BED0325B4FABD00F00071 /* MyWalletOverviewVC.swift */; };
 		491C437625AA8DA7005419C8 /* SlideInTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491C437525AA8DA7005419C8 /* SlideInTransitionAnimator.swift */; };
 		492F570125AE31270052C860 /* HorizontalHeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F570025AE31270052C860 /* HorizontalHeroView.swift */; };
 		4931C8E2259BA1BD00A6C398 /* CarousalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931C8E1259BA1BD00A6C398 /* CarousalVC.swift */; };
@@ -84,6 +86,8 @@
 		490D12792598F3D2002AC6E7 /* GpsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GpsVC.swift; sourceTree = "<group>"; };
 		490FAB7325AD01E1008EDCB7 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		491BD05125A6A920004C7B36 /* vod.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = vod.mp4; path = ../../../Downloads/vod.mp4; sourceTree = "<group>"; };
+		491BECFE25B4FA2600F00071 /* TopHeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeroView.swift; sourceTree = "<group>"; };
+		491BED0325B4FABD00F00071 /* MyWalletOverviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletOverviewVC.swift; sourceTree = "<group>"; };
 		491C437525AA8DA7005419C8 /* SlideInTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransitionAnimator.swift; sourceTree = "<group>"; };
 		492F570025AE31270052C860 /* HorizontalHeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalHeroView.swift; sourceTree = "<group>"; };
 		4931C8E1259BA1BD00A6C398 /* CarousalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarousalVC.swift; sourceTree = "<group>"; };
@@ -270,6 +274,8 @@
 			isa = PBXGroup;
 			children = (
 				496ABFAE25B387860098EB62 /* MyWalletVC.swift */,
+				491BECFE25B4FA2600F00071 /* TopHeroView.swift */,
+				491BED0325B4FABD00F00071 /* MyWalletOverviewVC.swift */,
 			);
 			path = MyWallet;
 			sourceTree = "<group>";
@@ -519,12 +525,14 @@
 				4978649D2596C67300FD83EA /* CustomTableVC.swift in Sources */,
 				497CC5C325A9096400AB6F69 /* VideoEditVC.swift in Sources */,
 				49629DCF25875E5400BF5B8A /* EnlargeAnimationController.swift in Sources */,
+				491BED0425B4FABD00F00071 /* MyWalletOverviewVC.swift in Sources */,
 				49E7F0CA2559D0F500F86CC3 /* SceneDelegate.swift in Sources */,
 				4949BA8E2588569E004F083E /* MyPresentationController.swift in Sources */,
 				495D91FD258A8D1D00D19ED9 /* DownArrow.swift in Sources */,
 				490D127A2598F3D2002AC6E7 /* GpsVC.swift in Sources */,
 				49C9C06925AE4FA900618980 /* MenuBar.swift in Sources */,
 				49C9C07425AE865F00618980 /* DetailMenuVC.swift in Sources */,
+				491BECFF25B4FA2600F00071 /* TopHeroView.swift in Sources */,
 				49A208C9258878FC00084C15 /* AppExtensions.swift in Sources */,
 				49EF59A7259BE95F00E69E64 /* ProductCell.swift in Sources */,
 				495D9202258AACC300D19ED9 /* SummaryTableViewController.swift in Sources */,
