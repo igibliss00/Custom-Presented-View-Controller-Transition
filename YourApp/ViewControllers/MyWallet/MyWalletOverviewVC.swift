@@ -21,7 +21,7 @@ class MyWalletOverviewVC: UIViewController {
     }
     
     static let sectionHeaderElementKind = "section-header-element-kind"
-    let myWalletDataController = MyWalletDataController()
+    let myWalletDataController = MyWalletDataController(dataCategory: .overview)
     var dataSource: UICollectionViewDiffableDataSource<MyWalletDataController.WalletSection, MyWalletDataController.WalletData>! = nil
     var collectionView: UICollectionView! = nil
     var currentSnapshot: NSDiffableDataSourceSnapshot<MyWalletDataController.WalletSection, MyWalletDataController.WalletData>! = nil
@@ -94,6 +94,7 @@ extension MyWalletOverviewVC {
                 let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(100))
                 let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: MyWalletOverviewVC.sectionHeaderElementKind, alignment: .top)
                 section.boundarySupplementaryItems = [sectionHeader]
+                
                 return section
             }
         }

@@ -25,7 +25,6 @@ class MyWalletVC: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(topHerViewHandler), name: .TopHeroViewTapped, object: nil)
         
-        configureNavigationBar()
         configureToHeroView()
         configureToolBar()
         configureChildVC()
@@ -35,6 +34,11 @@ class MyWalletVC: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         scrollView.contentSize = myWalletOverviewVC.view.bounds.size
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureNavigationBar()
     }
     
     func configureNavigationBar() {
@@ -134,7 +138,9 @@ class MyWalletVC: UIViewController {
     
     @objc func buttonPressed(_ sender: UIButton) {
         if case let currentTitle = sender.currentTitle, currentTitle == "Wallet" {
-            
+            let walletDetailVC = WalletDetailVC()
+            self.navigationController?.pushViewController(walletDetailVC, animated: true)
+//            self.present(walletDetailVC, animated: true, completion: nil)
         }
     }
 }

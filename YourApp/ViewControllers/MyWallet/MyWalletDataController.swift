@@ -63,33 +63,63 @@ class MyWalletDataController {
             self.isIncreased = isIncreased
         }
     }
+    
+    class CreditCardData: WalletData {
+        var title: String!
+        var expire: String!
+        
+        init(title: String, expire: String) {
+            self.title = title
+            self.expire = expire
+        }
+    }
 
     var data: [WalletSection] {
         return _data
     }
     
-    init() {
-        generateData()
+    enum DataCategory {
+        case overview, detail
+    }
+    
+    init(dataCategory: DataCategory) {
+        generateData(dataCategory: dataCategory)
     }
     
     fileprivate var _data = [WalletSection]()
 }
 
 extension MyWalletDataController {
-    func generateData() {
-        _data = [
-            WalletSection(title: "Payment Info",
-                          walletData: [CardData(title: "$153.50", subTitle: "Revenue", isIncreased: true),
-                                       CardData(title: "$79.50", subTitle: "Expense", isIncreased: false)]),
-            WalletSection(title: "Overview", walletData: [ListData(vendor: "Starbucks Coffee", date: "Today 09:12 AM", amount: "$153.50", isIncreased: false),
-                                                          ListData(vendor: "PayPal Transfer ", date: "January 11, 2021", amount: "$600.00", isIncreased: true),
-                                                          ListData(vendor: "7-Eleven", date: "January 09, 2021", amount: "$76.30", isIncreased: false),
-                                                          ListData(vendor: "Apple Store", date: "January 08, 2021", amount: "12.00", isIncreased: false),
-                                                          ListData(vendor: "Walmart", date: "January 08, 2021", amount: "$88.30", isIncreased: false),
-                                                          ListData(vendor: "Bank of America", date: "January 05, 2021", amount: "$1325.00", isIncreased: true),
-                                                          ListData(vendor: "Mastercard", date: "January 04, 2021", amount: "$129.15", isIncreased: true),
-                                                          ListData(vendor: "iTunes Store", date: "January 02, 2021", amount: "$39.96", isIncreased: false)])
-        ]
+    func generateData(dataCategory: DataCategory) {
+        if dataCategory == .overview {
+            _data = [
+                WalletSection(title: "Payment Info",
+                              walletData: [CardData(title: "$153.50", subTitle: "Revenue", isIncreased: true),
+                                           CardData(title: "$79.50", subTitle: "Expense", isIncreased: false)]),
+                WalletSection(title: "Overview", walletData: [ListData(vendor: "Starbucks Coffee", date: "Today 09:12 AM", amount: "$153.50", isIncreased: false),
+                                                              ListData(vendor: "PayPal Transfer ", date: "January 11, 2021", amount: "$600.00", isIncreased: true),
+                                                              ListData(vendor: "7-Eleven", date: "January 09, 2021", amount: "$76.30", isIncreased: false),
+                                                              ListData(vendor: "Apple Store", date: "January 08, 2021", amount: "12.00", isIncreased: false),
+                                                              ListData(vendor: "Walmart", date: "January 08, 2021", amount: "$88.30", isIncreased: false),
+                                                              ListData(vendor: "Bank of America", date: "January 05, 2021", amount: "$1325.00", isIncreased: true),
+                                                              ListData(vendor: "Mastercard", date: "January 04, 2021", amount: "$129.15", isIncreased: true),
+                                                              ListData(vendor: "iTunes Store", date: "January 02, 2021", amount: "$39.96", isIncreased: false)]),
+            ]
+        } else if dataCategory == .detail {
+            _data = [
+                WalletSection(title: "Credit Card", walletData: [CreditCardData(title: "VISA", expire: "Expires 02/20/2022"),
+                                                                 CreditCardData(title: "MasterCard", expire: "Expires 05/12/2024")]),
+                WalletSection(title: "Overview", walletData: [ListData(vendor: "Starbucks Coffee", date: "Today 09:12 AM", amount: "$153.50", isIncreased: false),
+                                                              ListData(vendor: "PayPal Transfer ", date: "January 11, 2021", amount: "$600.00", isIncreased: true),
+                                                              ListData(vendor: "7-Eleven", date: "January 09, 2021", amount: "$76.30", isIncreased: false),
+                                                              ListData(vendor: "Apple Store", date: "January 08, 2021", amount: "12.00", isIncreased: false),
+                                                              ListData(vendor: "Walmart", date: "January 08, 2021", amount: "$88.30", isIncreased: false),
+                                                              ListData(vendor: "Bank of America", date: "January 05, 2021", amount: "$1325.00", isIncreased: true),
+                                                              ListData(vendor: "Mastercard", date: "January 04, 2021", amount: "$129.15", isIncreased: true),
+                                                              ListData(vendor: "iTunes Store", date: "January 02, 2021", amount: "$39.96", isIncreased: false)])
+            ]
+        }
+
 
     }
 }

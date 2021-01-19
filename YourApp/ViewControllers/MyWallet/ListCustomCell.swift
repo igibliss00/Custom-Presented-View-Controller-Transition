@@ -39,6 +39,7 @@ extension ListCustomCell {
         // vendor label
         vendorLabel.translatesAutoresizingMaskIntoConstraints = false
         vendorLabel.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        vendorLabel.textColor = .gray
         vendorLabel.sizeToFit()
         vendorLabel.adjustsFontForContentSizeCategory = true
         contentView.addSubview(vendorLabel)
