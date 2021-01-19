@@ -95,6 +95,15 @@ extension WalletDetailVC {
             }
         }
         
+//        var layout: UICollectionViewCompositionalLayout!
+//        
+//        switch layoutType {
+//            case <#pattern#>:
+//                <#code#>
+//            default:
+//                <#code#>
+//        }
+//        
         return layout
     }
 }

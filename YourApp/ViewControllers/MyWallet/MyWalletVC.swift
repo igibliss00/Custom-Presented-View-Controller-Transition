@@ -13,6 +13,7 @@ class MyWalletVC: UIViewController {
     var stackView: UIStackView!
     var toolBarStackView: UIStackView!
     var myWalletOverviewVC: UIViewController!
+    var childVCHeight: CGFloat! = 1000
     
     override func loadView() {
         let v = UIView()
@@ -24,7 +25,7 @@ class MyWalletVC: UIViewController {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(self, selector: #selector(topHerViewHandler), name: .TopHeroViewTapped, object: nil)
-        
+        navigationController?.delegate = self
         configureToHeroView()
         configureToolBar()
         configureChildVC()
@@ -40,7 +41,11 @@ class MyWalletVC: UIViewController {
         super.viewWillAppear(animated)
         configureNavigationBar()
     }
-    
+}
+
+// MARK:- configure UI
+
+extension MyWalletVC {
     func configureNavigationBar() {
         view.insetsLayoutMarginsFromSafeArea = false
         navigationController?.setNavigationBarHidden(true, animated: true)
@@ -91,9 +96,8 @@ class MyWalletVC: UIViewController {
         myWalletOverviewVC.view.translatesAutoresizingMaskIntoConstraints = false
         myWalletOverviewVC.didMove(toParent: self)
     }
-
+    
     // resize the parent vc according to the child vc
-    var childVCHeight: CGFloat! = 1000
     override func preferredContentSizeDidChange(forChildContentContainer container: UIContentContainer) {
         super.preferredContentSizeDidChange(forChildContentContainer: container)
         if (container as? MyWalletOverviewVC) != nil {
@@ -139,11 +143,31 @@ class MyWalletVC: UIViewController {
     @objc func buttonPressed(_ sender: UIButton) {
         if case let currentTitle = sender.currentTitle, currentTitle == "Wallet" {
             let walletDetailVC = WalletDetailVC()
+//            walletDetailVC.transitioningDelegate = self
+//            walletDetailVC.modalPresentationStyle = .custom
             self.navigationController?.pushViewController(walletDetailVC, animated: true)
-//            self.present(walletDetailVC, animated: true, completion: nil)
         }
     }
 }
+
+// MARK:- transition delegate
+
+extension MyWalletVC: UIViewControllerTransitioningDelegate, UINavigationControllerDelegate {
+    
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        return DissolveTransitionAnimator()
+    }
+    
+//    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//        return DissolveTransitionAnimator()
+//    }
+//
+//    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//        return DissolveTransitionAnimator()
+//    }
+}
+
 
 
 //    func createBalanceLabelSeries(text: [String], previous: UIView?) -> (UILabel?, [NSLayoutConstraint]) {
@@ -175,4 +199,4 @@ class MyWalletVC: UIViewController {
 //        NSLayoutConstraint.activate(constraints)
 //        return (balanceLabelArr[balanceLabelArr.count - 1], constraints)
 //    }
-    
+
