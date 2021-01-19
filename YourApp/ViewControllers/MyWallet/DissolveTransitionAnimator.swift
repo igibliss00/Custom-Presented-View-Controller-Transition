@@ -24,12 +24,10 @@ class DissolveTransitionAnimator: NSObject, UIViewControllerAnimatedTransitionin
         let whiteBackgroundView = UIView()
         whiteBackgroundView.backgroundColor = .white
         whiteBackgroundView.frame = containerView.bounds
-//        containerView.insertSubview(whiteBackgroundView, belowSubview: snapshot)
-//        containerView.insertSubview(toView, belowSubview: whiteBackgroundView)
-        
-        containerView.insertSubview(toView, aboveSubview: fromView)
-        containerView.insertSubview(whiteBackgroundView, aboveSubview: toView)
-        containerView.insertSubview(snapshot, aboveSubview: whiteBackgroundView)
+
+        containerView.insertSubview(toView, at: 0)
+        containerView.insertSubview(whiteBackgroundView, at: 1)
+        containerView.insertSubview(snapshot, at: 2)
         
         toView.transform = CGAffineTransform(scaleX: 0.90, y: 0.90)
         toView.alpha = 0
@@ -39,16 +37,16 @@ class DissolveTransitionAnimator: NSObject, UIViewControllerAnimatedTransitionin
             delay: 0,
             options: [],
             animations: {
+                UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.2, animations: {
+                    fromView.alpha = 0
+                })
+                
                 UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.3, animations: {
                     snapshot.transform = CGAffineTransform(scaleX: 0.90, y: 0.90)
                 })
                 
-                UIView.addKeyframe(withRelativeStartTime: 0.4, relativeDuration: 0.4, animations: {
+                UIView.addKeyframe(withRelativeStartTime: 0.6, relativeDuration: 0.4, animations: {
                     snapshot.alpha = 0
-                })
-                
-                UIView.addKeyframe(withRelativeStartTime: 0.9, relativeDuration: 0.2, animations: {
-                    fromView.alpha = 0
                 })
                 
                 UIView.addKeyframe(withRelativeStartTime: 0.7, relativeDuration: 0.9, animations: {

@@ -22,6 +22,7 @@ class CreditCardCell: UICollectionViewCell {
         
         configure()
         setConstraints()
+        configureGesture()
     }
     
     required init?(coder: NSCoder) {
@@ -126,5 +127,18 @@ extension CreditCardCell {
             expiryLabel.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
             expiryLabel.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor)
         ])
+    }
+}
+
+// MARK:- configure gesture
+
+extension CreditCardCell {
+    func configureGesture() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
+        self.addGestureRecognizer(tap)
+    }
+    
+    @objc func tapHandler() {
+        NotificationCenter.default.post(name: .CreditCardTapped, object: self)
     }
 }

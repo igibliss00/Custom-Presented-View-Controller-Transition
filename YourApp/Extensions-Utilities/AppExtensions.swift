@@ -53,6 +53,7 @@ extension UIImage {
 extension Notification.Name {
     static let CustomViewTapped = Notification.Name("CustomViewTapped")
     static let TopHeroViewTapped = Notification.Name("TopHeroViewTapped")
+    static let CreditCardTapped = Notification.Name("CreditCardTapped")
 }
 
 // My Wallet VC

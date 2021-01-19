@@ -143,8 +143,6 @@ extension MyWalletVC {
     @objc func buttonPressed(_ sender: UIButton) {
         if case let currentTitle = sender.currentTitle, currentTitle == "Wallet" {
             let walletDetailVC = WalletDetailVC()
-//            walletDetailVC.transitioningDelegate = self
-//            walletDetailVC.modalPresentationStyle = .custom
             self.navigationController?.pushViewController(walletDetailVC, animated: true)
         }
     }
@@ -158,14 +156,6 @@ extension MyWalletVC: UIViewControllerTransitioningDelegate, UINavigationControl
         
         return DissolveTransitionAnimator()
     }
-    
-//    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//        return DissolveTransitionAnimator()
-//    }
-//
-//    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//        return DissolveTransitionAnimator()
-//    }
 }
 
 
